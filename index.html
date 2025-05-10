@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="style.css"/>
    <link rel="icon" href="images/icono-ls.ico" type="image/x-icon">
 </head>
+
+
 <body>
  <!-- NAV -->
 <nav class="navbar navbar-expand-lg navbar-dark latitud-navbar">
@@ -35,19 +37,27 @@
 
 <!-- HERO -->
 <header class="hero">
-  <!-- Imagen aérea -->
-  <img src="images/aerea.png" class="hero-img" id="imgAerea">
+
+  <!-- Overlay oscuro encima de todas las imágenes -->
+  <div class="hero-overlay"></div>
+
+  <!-- Etapas del hero -->
+  <img src="images/hero-1-satelital.png" class="hero-img stage stage-1" />
   
-  <!-- Imagen catastro oculta por una "lupa" circular -->
-  <div class="mask-container" id="maskContainer">
-    <img src="images/catastro.png" class="hero-img" id="imgCatastro">
+  <div class="mask-container stage stage-2">
+    <img src="images/hero-2-catastro.png" class="hero-img" />
   </div>
 
-  <!-- Texto central -->
-  <div class="container position-absolute top-50 start-50 translate-middle text-white text-center" style="z-index: 3;">
-    <h1 class="display-5 fw-bold">Medimos. Proyectamos. <br>Acompañamos.</h1>
+  <img src="images/hero-3-dron.png" class="hero-img stage stage-3" />
+  <img src="images/hero-4-gnss.png" class="hero-img stage stage-4" />
+  <img src="images/hero-5-amojonamiento.png" class="hero-img stage stage-5" />
+
+  <!-- Texto -->
+  <div class="container position-absolute top-50 start-50 translate-middle text-white text-center" style="z-index: 5;">
+    <h1 class="display-5 fw-bold hero-title">Medimos. Proyectamos. <br>Acompañamos.</h1>
   </div>
 </header>
+
 
   <!-- AGRIMENSURA -->
   <section id="agrimensura" class="section py-5">
@@ -200,6 +210,15 @@
     </div>
   </div>
 </section>
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<!-- Script del Hero -->
+<script src="js/hero.js"></script>
+</body>
+</html>
+
+
 <!-- BOTON WHATSAPP FLOTANTE -->
   <style>
     .whatsapp-float {
@@ -231,38 +250,5 @@
     <p>&copy; 2025 Latitud Sur - Agrimensura & Topografía</p>
   </div>
 </footer>
-<!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  // Zoom in en la imagen aérea
-  gsap.to("#imgAerea", {
-    scale: 2,
-    duration: 6,
-    transformOrigin: "center center",
-    ease: "power2.inOut"
-  });
 
-  // Lupa que revela el catastro
-  gsap.to("#maskContainer", {
-    duration: 4,
-    delay: 4,
-    ease: "power2.out",
-    onUpdate: function () {
-      const radius = this.progress() * 400 + 50;
-      document.getElementById("maskContainer").style.webkitMaskImage =
-        `radial-gradient(circle ${radius}px at 50% 50%, black 100%, transparent 100%)`;
-      document.getElementById("maskContainer").style.maskImage =
-        `radial-gradient(circle ${radius}px at 50% 50%, black 100%, transparent 100%)`;
-    }
-  });
 
-  // Zoom out final de imagen aérea (opcional)
-  gsap.to("#imgAerea", {
-    scale: 1,
-    duration: 4,
-    delay: 8,
-    ease: "power2.inOut"
-  });
-});
-</script>
