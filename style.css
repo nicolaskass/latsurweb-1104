@@ -19,3 +19,24 @@ body {
   z-index: 999;
   text-decoration: none;
 }
+.latitud-navbar {
+  background-color: #1c1c1e;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.logo-navbar {
+  height: 60px;
+  transition: height 0.3s ease;
+}
+
+@media (max-width: 576px) {
+  .logo-navbar {
+    height: 45px;
+  }
+
+  .latitud-navbar {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}

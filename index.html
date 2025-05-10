@@ -8,13 +8,14 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
+   <link rel="icon" href="images/icono-ls.ico" type="image/x-icon">
 </head>
 <body>
  <!-- NAV -->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1c1c1e; padding-top: 0.8rem; padding-bottom: 0.8rem;">
+<nav class="navbar navbar-expand-lg navbar-dark latitud-navbar">
   <div class="container align-items-center">
     <a class="navbar-brand" href="#">
-      <img src="img/logo.jpg" alt="Latitud Sur" height="60">
+      <img src="images/logo.png" alt="Latitud Sur" class="logo-navbar">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -33,12 +34,51 @@
 
 
 
-  <!-- HERO -->
-  <header class="hero d-flex align-items-center justify-content-center text-white text-center">
-    <div class="container">
-      <h1 class="display-5 fw-bold">Soluciones Profesionales en Agrimensura y Topografía</h1>
-    </div>
-  </header>
+<!-- HERO -->
+<header class="hero d-flex align-items-center justify-content-center text-white text-center position-relative" style="height: 100vh; overflow: hidden;">
+  <img src="images/aerea.png" id="img1" class="hero-img zoom-in-start">
+  <img src="images/catastro.png" id="img2" class="hero-img fade-in-late">
+
+  <div class="container position-absolute top-50 start-50 translate-middle text-white text-center">
+    <h1 class="display-5 fw-bold">Medimos. Proyectamos. <br>Acompañamos.</h1>
+  </div>
+</header>
+
+<style>
+.hero-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 5s ease-in-out, opacity 3s ease-in-out;
+  z-index: 1;
+}
+
+#img1.zoom-in-start {
+  transform: scale(1);
+  animation: zoomIn 6s forwards;
+}
+
+#img2 {
+  opacity: 0;
+  z-index: 2;
+}
+
+#img2.fade-in-late {
+  animation: fadeIn 3s ease-in 5s forwards;
+}
+
+@keyframes zoomIn {
+  0% { transform: scale(1); }
+  100% { transform: scale(2.5); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+</style>
+
 
   <!-- AGRIMENSURA -->
   <section id="agrimensura" class="section py-5">
@@ -215,12 +255,10 @@
 </a>
 
 
+
 <!-- FOOTER -->
 <footer class="footer text-white text-center py-3" style="background-color: #1c1c1e;">
   <div class="container">
     <p>&copy; 2025 Latitud Sur - Agrimensura & Topografía</p>
   </div>
 </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
