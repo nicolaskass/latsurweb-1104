@@ -164,3 +164,52 @@ body {
 @keyframes fadeInText {
   to { opacity: 1; }
 }
+.servicio-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 30px 20px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.servicio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.servicio-card i {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.curvas-fondo {
+  background-image: url('images/curvas-fondo.png'); /* reemplazar con tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+}
+
+.curvas-fondo::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: -1;
+}
+.fondo-oscuro {
+  background-color: #1c1c1e;
+  color: white;
+}
+
+.fondo-oscuro h2,
+.fondo-oscuro h5,
+.fondo-oscuro p,
+.fondo-oscuro li {
+  color: white;
+}
