@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Latitud Sur - Agrimensura y Topografía</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
    <link rel="icon" href="images/icono-ls.ico" type="image/x-icon">
-</head>
+
+  </head>
 
 
 <body>
@@ -60,60 +62,80 @@
 
 
   <!-- AGRIMENSURA -->
-  <section id="agrimensura" class="section py-5">
-    <div class="container text-center">
-      <h2 class="mb-5">Agrimensura</h2>
-      <div class="row g-4">
-        <div class="col-md-3">
-          <i class="fa fa-map fa-2x text-success mb-3"></i>
-          <h5>Estados Parcelarios</h5>
-          <p>Documento esencial para verificar condiciones físicas y jurídicas de un inmueble.</p>
-        </div>
-        <div class="col-md-3">
-          <i class="fa fa-border-all fa-2x text-success mb-3"></i>
-          <h5>Deslinde y Amojonamiento</h5>
-          <p>Materialización de límites legales para evitar conflictos vecinales.</p>
-        </div>
-        <div class="col-md-3">
-          <i class="fa fa-layer-group fa-2x text-success mb-3"></i>
-          <h5>Subdivisión</h5>
-          <p>División legal de terrenos bajo normas de Geodesia o Propiedad Horizontal.</p>
-        </div>
-        <div class="col-md-3">
-          <i class="fa fa-gavel fa-2x text-success mb-3"></i>
-          <h5>Artículo 6° y Decreto 947</h5>
-          <p>Asesoramiento legal en planificación territorial.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TOPOGRAFÍA -->
-  <section id="topografia" class="section py-5 bg-light">
-    <div class="container text-center">
-      <h2 class="mb-5">Topografía</h2>
-      <div class="row g-4">
+  <section id="agrimensura" class="section py-5 position-relative curvas-fondo">
+    <div class="container">
+      <h2 class="text-center mb-5">Agrimensura</h2>
+      <div class="row">
         <div class="col-md-4">
-          <i class="fa fa-map fa-2x text-primary mb-3"></i>
-          <h5>Relevamientos Topográficos</h5>
-          <p>Mediciones detalladas del terreno con estaciones totales y GNSS, fundamentales para obras y estudios.</p>
+          <div class="nav flex-column nav-pills me-3" id="agrimensura-tab" role="tablist" aria-orientation="vertical">
+            <button class="nav-link active" id="tab-parcelario" data-bs-toggle="pill" data-bs-target="#content-parcelario" type="button" role="tab">Estado Parcelario</button>
+            <button class="nav-link" id="tab-deslinde" data-bs-toggle="pill" data-bs-target="#content-deslinde" type="button" role="tab">Deslinde y Amojonamiento</button>
+            <button class="nav-link" id="tab-subdivisiones" data-bs-toggle="pill" data-bs-target="#content-subdivisiones" type="button" role="tab">Subdivisiones</button>
+            <button class="nav-link" id="tab-articulo6" data-bs-toggle="pill" data-bs-target="#content-articulo6" type="button" role="tab">Artículo 6° / Decreto 947</button>
+          </div>
         </div>
-        <div class="col-md-4">
-          <i class="fa fa-drafting-compass fa-2x text-primary mb-3"></i>
-          <h5>Replanteos de Obra</h5>
-          <p>Traslado preciso de planos al terreno. Ideal para obras civiles, viales y urbanísticas.</p>
-        </div>
-        <div class="col-md-4">
-          <i class="fa fa-ruler-combined fa-2x text-primary mb-3"></i>
-          <h5>Nivelaciones</h5>
-          <p>Control de cotas y pendientes para proyectos de saneamiento, vialidad y edificación.</p>
+  
+        <div class="col-md-8">
+          <div class="tab-content" id="agrimensura-tabContent">
+            <div class="tab-pane fade show active" id="content-parcelario" role="tabpanel">
+              <h4>Estado Parcelario</h4>
+              <p>Documento técnico-legal obligatorio en Buenos Aires para verificar las condiciones físicas y jurídicas de un inmueble. Requisito para la escrituración y el registro catastral.</p>
+            </div>
+            <div class="tab-pane fade" id="content-deslinde" role="tabpanel">
+              <h4>Deslinde y Amojonamiento</h4>
+              <p>Proceso técnico que determina los límites legales de una propiedad. Incluye la colocación de mojones o hitos visibles que evitan conflictos con vecinos.</p>
+            </div>
+            <div class="tab-pane fade" id="content-subdivisiones" role="tabpanel">
+              <h4>Subdivisiones</h4>
+              <p>División de parcelas en unidades más pequeñas, cumpliendo con normas de Geodesia o Propiedad Horizontal. Necesario para desarrollos inmobiliarios o herencias.</p>
+            </div>
+            <div class="tab-pane fade" id="content-articulo6" role="tabpanel">
+              <h4>Artículo 6° / Decreto 947</h4>
+              <p>Asesoramiento y ejecución de trámites según normativas de ordenamiento territorial. Requisitos previos para subdividir o construir según la Ley Provincial.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
   
+
+  <!-- TOPOGRAFÍA -->
+  <section id="topografia" class="section py-5 bg-light position-relative curvas-fondo">
+    <div class="container">
+      <h2 class="text-center mb-5">Topografía</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="nav flex-column nav-pills me-3" id="topografia-tab" role="tablist" aria-orientation="vertical">
+            <button class="nav-link active" id="tab-relevamientos" data-bs-toggle="pill" data-bs-target="#content-relevamientos" type="button" role="tab">Relevamientos</button>
+            <button class="nav-link" id="tab-replanteos" data-bs-toggle="pill" data-bs-target="#content-replanteos" type="button" role="tab">Replanteos</button>
+            <button class="nav-link" id="tab-nivelaciones" data-bs-toggle="pill" data-bs-target="#content-nivelaciones" type="button" role="tab">Nivelaciones</button>
+          </div>
+        </div>
+  
+        <div class="col-md-8">
+          <div class="tab-content" id="topografia-tabContent">
+            <div class="tab-pane fade show active" id="content-relevamientos" role="tabpanel">
+              <h4>Relevamientos Topográficos</h4>
+              <p>Obtención precisa de datos altimétricos y planimétricos mediante GNSS y estaciones totales. Esenciales para obras civiles, loteos y documentación catastral.</p>
+            </div>
+            <div class="tab-pane fade" id="content-replanteos" role="tabpanel">
+              <h4>Replanteos de Obra</h4>
+              <p>Traslado de planos al terreno para ejecución de obras. Se marcan puntos, ejes y cotas para garantizar fidelidad constructiva.</p>
+            </div>
+            <div class="tab-pane fade" id="content-nivelaciones" role="tabpanel">
+              <h4>Nivelaciones</h4>
+              <p>Determinación de cotas relativas y pendientes. Ideal para proyectos de drenaje, caminos, redes sanitarias y diseño urbano.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
 <!-- NOSOTROS -->
-<section id="nosotros" class="section py-5">
+<section id="nosotros" class="section py-5 fondo-oscuro">
   <div class="container">
     <h2 class="text-center mb-5">Nosotros</h2>
     <div class="row align-items-center">
@@ -135,7 +157,7 @@
 
 
 <!-- TRABAJOS REALIZADOS -->
-<section id="trabajos" class="section py-5 bg-light">
+<section id="trabajos" class="section py-5 position-relative curvas-fondo">
   <div class="container">
     <h2 class="text-center mb-5">Nuestros Trabajos</h2>
     <div class="row g-4">
@@ -171,7 +193,7 @@
 </section>
 
 <!-- CONTACTO COMBINADO -->
-<section id="contacto" class="section py-5 bg-light">
+<section id="contacto" class="section py-5 position-relative curvas-fondo">
   <div class="container">
     <h2 class="text-center mb-5">Contacto</h2>
     <div class="row justify-content-center align-items-start">
