@@ -33,52 +33,21 @@
 </nav>
 
 
-
 <!-- HERO -->
-<header class="hero d-flex align-items-center justify-content-center text-white text-center position-relative" style="height: 100vh; overflow: hidden;">
-  <img src="images/aerea.png" id="img1" class="hero-img zoom-in-start">
-  <img src="images/catastro.png" id="img2" class="hero-img fade-in-late">
+<header class="hero">
+  <!-- Imagen aérea -->
+  <img src="images/aerea.png" class="hero-img" id="imgAerea">
+  
+  <!-- Imagen catastro oculta por una "lupa" circular -->
+  <div class="mask-container" id="maskContainer">
+    <img src="images/catastro.png" class="hero-img" id="imgCatastro">
+  </div>
 
-  <div class="container position-absolute top-50 start-50 translate-middle text-white text-center">
+  <!-- Texto central -->
+  <div class="container position-absolute top-50 start-50 translate-middle text-white text-center" style="z-index: 3;">
     <h1 class="display-5 fw-bold">Medimos. Proyectamos. <br>Acompañamos.</h1>
   </div>
 </header>
-
-<style>
-.hero-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 5s ease-in-out, opacity 3s ease-in-out;
-  z-index: 1;
-}
-
-#img1.zoom-in-start {
-  transform: scale(1);
-  animation: zoomIn 6s forwards;
-}
-
-#img2 {
-  opacity: 0;
-  z-index: 2;
-}
-
-#img2.fade-in-late {
-  animation: fadeIn 3s ease-in 5s forwards;
-}
-
-@keyframes zoomIn {
-  0% { transform: scale(1); }
-  100% { transform: scale(2.5); }
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-</style>
-
 
   <!-- AGRIMENSURA -->
   <section id="agrimensura" class="section py-5">
@@ -262,3 +231,38 @@
     <p>&copy; 2025 Latitud Sur - Agrimensura & Topografía</p>
   </div>
 </footer>
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Zoom in en la imagen aérea
+  gsap.to("#imgAerea", {
+    scale: 2,
+    duration: 6,
+    transformOrigin: "center center",
+    ease: "power2.inOut"
+  });
+
+  // Lupa que revela el catastro
+  gsap.to("#maskContainer", {
+    duration: 4,
+    delay: 4,
+    ease: "power2.out",
+    onUpdate: function () {
+      const radius = this.progress() * 400 + 50;
+      document.getElementById("maskContainer").style.webkitMaskImage =
+        `radial-gradient(circle ${radius}px at 50% 50%, black 100%, transparent 100%)`;
+      document.getElementById("maskContainer").style.maskImage =
+        `radial-gradient(circle ${radius}px at 50% 50%, black 100%, transparent 100%)`;
+    }
+  });
+
+  // Zoom out final de imagen aérea (opcional)
+  gsap.to("#imgAerea", {
+    scale: 1,
+    duration: 4,
+    delay: 8,
+    ease: "power2.inOut"
+  });
+});
+</script>

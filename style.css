@@ -40,3 +40,33 @@ body {
     padding-bottom: 0.5rem;
   }
 }
+/* HERO ANIMACIÓN CON LUPA */
+
+.hero {
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+}
+
+.hero-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.mask-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(circle 0px at 50% 50%, black 100%, transparent 100%);
+  mask-image: radial-gradient(circle 0px at 50% 50%, black 100%, transparent 100%);
+  z-index: 2;
+}
