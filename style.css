@@ -70,3 +70,97 @@ body {
   mask-image: radial-gradient(circle 0px at 50% 50%, black 100%, transparent 100%);
   z-index: 2;
 }
+/* HERO cinemático */
+
+.hero {
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+}
+
+.hero-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 2s ease-in-out;
+}
+
+.mask-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(circle 0px at 50% 50%, black 100%, transparent 100%);
+  mask-image: radial-gradient(circle 0px at 50% 50%, black 100%, transparent 100%);
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 2s ease-in-out;
+}
+
+.hero-title {
+  opacity: 0;
+  animation: fadeInText 3s ease-out 1s forwards;
+}
+
+@keyframes fadeInText {
+  to { opacity: 1; }
+}
+.hero {
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+}
+
+.hero-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 2s ease-in-out;
+}
+
+/* Máscara del catastro */
+.mask-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(circle 0px at 50% 50%, black 100%, transparent 100%);
+  mask-image: radial-gradient(circle 0px at 50% 50%, black 100%, transparent 100%);
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 2s ease-in-out;
+}
+
+/* Capa oscura sobre fondo */
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+  z-index: 3;
+}
+
+/* Texto central */
+.hero-title {
+  opacity: 0;
+  animation: fadeInText 3s ease-out 1s forwards;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes fadeInText {
+  to { opacity: 1; }
+}
