@@ -12,7 +12,8 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-   <link rel="icon" href="images/icono-ls.ico" type="image/x-icon">
+  <link rel="icon" href="images/icono-ls.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
   </head>
 
@@ -195,58 +196,168 @@
 <section id="nosotros" class="section py-5 curvas-fondo-oscuro">
   <div class="container">
     <h2 class="text-center mb-5">Nosotros</h2>
-    <div class="row align-items-center">
-      <div class="col-md-6">
-        <img src="images/equipo.jpg" class="img-fluid rounded shadow" alt="Equipo Latitud Sur">
+
+    <!-- Descripción institucional -->
+    <div class="row mb-5">
+      <div class="col-lg-10 mx-auto text-center" data-aos="fade-in" data-aos-duration="1000">
+        <p class="lead">
+          <strong>Latitud Sur</strong> es un estudio profesional con base en La Plata dedicado a brindar servicios de agrimensura y topografía en todo el país. Con más de una década de experiencia combinada, nos especializamos en proyectos urbanos, rurales, viales e industriales, ofreciendo soluciones técnicas precisas y acompañamiento profesional en cada etapa del trabajo.
+        </p>
       </div>
-      <div class="col-md-6">
-        <p><strong>Latitud Sur</strong> es un estudio profesional dedicado a brindar servicios de agrimensura y topografía con más de 10 años de experiencia.</p>
-        <ul>
-          <li><strong>Martín Moccia</strong> – Agrimensor profesional</li>
-          <li><strong>Sebastián Negro</strong> – Técnico de campo y procesamiento</li>
-          <li><strong>Nicolás Kass</strong> – Gestión técnica, comercial y estrategia</li>
-        </ul>
-        <p>Trabajamos en obras públicas y privadas, desarrollos urbanos, infraestructura vial y más.</p>
+    </div>
+
+    <!-- Tarjetas del equipo -->
+    <div class="row g-4 justify-content-center">
+      <!-- Martín Moccia -->
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="card persona-card text-center h-100">
+          <img src="images/martin.jpg" class="card-img-top rounded-top" alt="Martín Moccia">
+          <div class="card-body">
+            <h5 class="card-title">Martín Moccia</h5>
+            <p class="card-text">
+              Ingeniero Agrimensor con más de 10 años de experiencia en obras civiles, viales e hidráulicas. Ha desarrollado y ejecutado proyectos integrales desde el plano hasta el campo, realizando estados parcelarios, deslindes, amojonamientos, nivelaciones, replanteos de obra, traslados de cota, monitoreos y vuelos con dron, así como producción de planos CAD.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sebastián Saldivar -->
+      <!-- Sebastián -->
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card persona-card text-center h-100">
+          <img src="images/sebastian.jpg" class="card-img-top rounded-top" alt="Sebastián Saldivar">
+          <div class="card-body">
+            <h5 class="card-title">Sebastián Saldivar</h5>
+            <p class="card-text">
+              Agrimensor con más de una década de trayectoria en campo, especializado en obras públicas y privadas. Participó en numerosos proyectos topográficos y catastrales, incluyendo parcelamientos, nivelaciones, replanteos, obras hidráulicas, seguimiento con dron, y ejecución técnica desde el relevamiento hasta la documentación final.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nicolás Kass -->
+      <!-- Nicolás -->
+<div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card persona-card text-center h-100">
+          <img src="images/nicolas.jpg" class="card-img-top rounded-top" alt="Nicolás Kass">
+          <div class="card-body">
+            <h5 class="card-title">Nicolás Kass</h5>
+            <p class="card-text">
+              Licenciado en Biología, docente e investigador con más de 20 años de experiencia en planificación y gestión de proyectos. Aporta una visión estratégica con fuerte base en tecnología, incluyendo sistemas de información geográfica (GIS), modelado, sensores remotos y soluciones digitales aplicadas a la agrimensura. Encargado de la gestión técnica, operativa y administrativa del estudio.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cierre institucional -->
+    <div class="row mt-5">
+      <div class="col-lg-10 mx-auto text-center">
+        <p class="fst-italic text-light">
+          Un equipo interdisciplinario comprometido con la precisión, la eficiencia y el acompañamiento profesional en cada proyecto.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
 
+
+
 <!-- TRABAJOS REALIZADOS -->
-<section id="trabajos" class="section py-5 position-relative curvas-fondo-claro">
+<section id="trabajos" class="section py-5 curvas-fondo-claro">
   <div class="container">
     <h2 class="text-center mb-5">Nuestros Trabajos</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card shadow-sm h-100">
-          <img src="images/ruta2.jpg" class="card-img-top" alt="Ruta 2">
-          <div class="card-body">
-            <h5 class="card-title">Ensanche de Ruta 2</h5>
-            <p class="card-text">Relevamiento y replanteo de traza para ampliación de autopista provincial.</p>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="card trabajo-card">
+            <img src="images/ruta2.jpg" class="card-img-top" alt="Ruta 2">
+            <div class="card-body">
+              <h5 class="card-title">Ensanche de Ruta 2</h5>
+              <p class="card-text">Relevamiento y replanteo de traza para ampliación de autopista provincial.</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow-sm h-100">
-          <img src="images/saneamiento.jpg" class="card-img-top" alt="Saneamiento">
-          <div class="card-body">
-            <h5 class="card-title">Obras de Saneamiento</h5>
-            <p class="card-text">Nivelaciones y planialtimetría para redes cloacales, pluviales y estaciones de bombeo.</p>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="card trabajo-card">
+            <img src="images/saneamiento.jpg" class="card-img-top" alt="Saneamiento">
+            <div class="card-body">
+              <h5 class="card-title">Obras de Saneamiento</h5>
+              <p class="card-text">Nivelaciones para redes cloacales, pluviales y estaciones de bombeo.</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow-sm h-100">
-          <img src="images/urbanizacion.jpg" class="card-img-top" alt="Urbanización">
-          <div class="card-body">
-            <h5 class="card-title">Urbanización en La Plata</h5>
-            <p class="card-text">Subdivisiones y gestiones catastrales para emprendimientos inmobiliarios.</p>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="card trabajo-card">
+            <img src="images/urbanizacion.jpg" class="card-img-top" alt="Urbanización">
+            <div class="card-body">
+              <h5 class="card-title">Urbanización en La Plata</h5>
+              <p class="card-text">Subdivisiones y gestiones catastrales para desarrollos inmobiliarios.</p>
+            </div>
           </div>
         </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="card trabajo-card">
+            <img src="images/hidraulica.jpg" class="card-img-top" alt="Obra hidráulica">
+            <div class="card-body">
+              <h5 class="card-title">Obras Hidráulicas</h5>
+              <p class="card-text">Nivelaciones para planificación de escurrimientos y drenajes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <div class="card trabajo-card">
+            <img src="images/replanteo.jpg" class="card-img-top" alt="Replanteo">
+            <div class="card-body">
+              <h5 class="card-title">Replanteos en Obra</h5>
+              <p class="card-text">Marcado de ejes y cotas para obras civiles y viales.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="swiper-slide">
+          <div class="card trabajo-card">
+            <img src="images/camino.jpg" class="card-img-top" alt="Camino rural">
+            <div class="card-body">
+              <h5 class="card-title">Mejoras de Caminos</h5>
+              <p class="card-text">Topografía para mantenimiento y estabilización de caminos rurales.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="swiper-slide">
+          <div class="card trabajo-card">
+            <img src="images/industrial.jpg" class="card-img-top" alt="Parque industrial">
+            <div class="card-body">
+              <h5 class="card-title">Parques Industriales</h5>
+              <p class="card-text">Subdivisiones y proyectos técnicos para zonas industriales.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
+
+      <!-- Flechas -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
   </div>
+  <div class="swiper-pagination mt-4"></div>
 </section>
 
 <!-- CONTACTO COMBINADO -->
@@ -301,6 +412,50 @@
 
 <!-- Inicialización de AOS -->
 <script src="js/aos-init.js"></script>
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Swiper -->
+<script>
+  const isMobile = window.innerWidth < 768;
+
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    speed: 700,  // ⬅ transición más suave
+    autoplay: !isMobile
+      ? {
+          delay: 5000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true
+        }
+      : false,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2
+      },
+      992: {
+        slidesPerView: 3
+      }
+    }
+  });
+</script>
+
+
+
+
+
 </body>
 
 </body>
