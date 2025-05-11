@@ -7,13 +7,39 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function toggleDescripcion(button) {
-    const card = button.closest('.servicio-card-expandible');
+    const clickedCard = button.closest('.servicio-card-expandible');
+    const allCards = document.querySelectorAll('.servicio-card-expandible');
+  
+    allCards.forEach(card => {
+      if (card !== clickedCard) {
+        card.classList.remove('expandida');
+        card.querySelector('.toggle-chevron')?.classList.remove('rotate');
+        card.querySelector('.toggle-chevron i')?.classList.remove('fa-chevron-up');
+        card.querySelector('.toggle-chevron i')?.classList.add('fa-chevron-down');
+      }
+    });
+  
     const icon = button.querySelector('i');
+    const isExpanded = clickedCard.classList.toggle('expandida');
   
-    card.classList.toggle('expandida');
-    button.classList.toggle('rotate');
+    button.classList.toggle('rotate', isExpanded);
+    icon.classList.toggle('fa-chevron-down', !isExpanded);
+    icon.classList.toggle('fa-chevron-up', isExpanded);
+  }
   
-    icon.classList.toggle('fa-chevron-down');
-    icon.classList.toggle('fa-chevron-up');
+
+  function enviarWhatsappDesde(btn) {
+    const card = btn.closest('.servicio-card-expandible');
+    const servicio = card.dataset.servicio || "uno de sus servicios";
+  
+    const fecha = new Date().toLocaleDateString('es-AR');
+    const textoCopia = `${servicio} – ${fecha}`;
+    navigator.clipboard.writeText(textoCopia).then(() => {
+      console.log('Texto copiado:', textoCopia);
+    });
+  
+    const mensaje = `Hola, quiero hacer una consulta sobre ${servicio}.`;
+    const url = "https://wa.me/5492211234567?text=" + encodeURIComponent(mensaje);
+    window.open(url, '_blank');
   }
   
