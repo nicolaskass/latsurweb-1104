@@ -81,17 +81,61 @@ body {
 /* WHATSAPP FLOAT BUTTON */
 .whatsapp-float {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
   background-color: #25D366;
   color: white;
-  font-size: 28px;
-  padding: 12px 16px;
   border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  z-index: 999;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
   text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.whatsapp-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-float i {
+  line-height: 1;
+}
+
+/* Tooltip */
+.tooltip-whatsapp {
+  position: absolute;
+  right: 70px;
+  bottom: 50%;
+  transform: translateY(50%);
+  background-color: #333;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Mostrar tooltip en hover */
+.whatsapp-float:hover .tooltip-whatsapp {
+  opacity: 1;
+}
+
+/* Ocultar tooltip en móviles */
+@media (max-width: 768px) {
+  .tooltip-whatsapp {
+    display: none;
+  }
+}
+
 
 /* SERVICIOS CARDS */
 .servicio-card {
