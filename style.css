@@ -107,6 +107,25 @@ body {
   line-height: 1;
 }
 
+.whatsapp-float-link {
+  margin-top: 15px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 14px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 30px;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-float-link:hover {
+  background-color: #1ebe5b;
+}
+
 /* Tooltip */
 .tooltip-whatsapp {
   position: absolute;

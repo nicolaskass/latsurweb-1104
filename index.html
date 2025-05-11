@@ -69,8 +69,9 @@
     <h2 class="text-center mb-5 text-white">Servicios</h2>
     <div class="row g-4">
 <!-- Estado Parcelario -->
+<!-- Estado Parcelario -->
 <div class="col-md-6 col-lg-4">
-  <div class="servicio-card-expandible">
+  <div class="servicio-card-expandible" data-servicio="Estado Parcelario">
     <div class="card-top text-center">
       <i class="fa-solid fa-file-signature text-primary mb-2 fs-1"></i>
       <h5 class="fs-5 mb-0">Estado Parcelario</h5>
@@ -78,15 +79,16 @@
         <i class="fa-solid fa-chevron-down"></i>
       </button>
     </div>
-    <div class="servicio-descripcion">
-      <p class="mt-3 mb-0">Verificación legal y física de inmuebles. Obligatorio para escrituración y registro catastral en la Provincia de Buenos Aires.</p>
+    <div class="servicio-descripcion text-center">
+      <p class="mt-3 mb-3">Verificación legal y física de inmuebles. Obligatorio para escrituración y registro catastral en la Provincia de Buenos Aires.</p>
+      <a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
     </div>
   </div>
 </div>
 
 <!-- Deslinde y Amojonamiento -->
 <div class="col-md-6 col-lg-4">
-  <div class="servicio-card-expandible">
+  <div class="servicio-card-expandible" data-servicio="Deslinde y Amojonamiento">
     <div class="card-top text-center">
       <i class="fa-solid fa-map-location-dot text-primary mb-2 fs-1"></i>
       <h5 class="fs-5 mb-0">Deslinde y Amojonamiento</h5>
@@ -94,15 +96,16 @@
         <i class="fa-solid fa-chevron-down"></i>
       </button>
     </div>
-    <div class="servicio-descripcion">
-      <p class="mt-3 mb-0">Determinación de límites con mojones. Evita conflictos con vecinos y asegura la correcta delimitación de la propiedad.</p>
+    <div class="servicio-descripcion text-center">
+      <p class="mt-3 mb-3">Determinación de límites con mojones. Evita conflictos con vecinos y asegura la correcta delimitación de la propiedad.</p>
+      <a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
     </div>
   </div>
 </div>
 
 <!-- Subdivisiones -->
 <div class="col-md-6 col-lg-4">
-  <div class="servicio-card-expandible">
+  <div class="servicio-card-expandible" data-servicio="Subdivisiones">
     <div class="card-top text-center">
       <i class="fa-solid fa-diagram-project text-primary mb-2 fs-1"></i>
       <h5 class="fs-5 mb-0">Subdivisiones</h5>
@@ -110,15 +113,16 @@
         <i class="fa-solid fa-chevron-down"></i>
       </button>
     </div>
-    <div class="servicio-descripcion">
-      <p class="mt-3 mb-0">Fraccionamiento de parcelas conforme a normativa provincial. Ideal para herencias, desarrollos inmobiliarios o venta de lotes.</p>
+    <div class="servicio-descripcion text-center">
+      <p class="mt-3 mb-3">Fraccionamiento de parcelas para herencias, desarrollos inmobiliarios o ventas. Cumplimiento técnico y legal garantizado.</p>
+      <a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
     </div>
   </div>
 </div>
 
 <!-- Artículo 6° / Decreto 947 -->
 <div class="col-md-6 col-lg-4">
-  <div class="servicio-card-expandible">
+  <div class="servicio-card-expandible" data-servicio="Artículo 6° / Decreto 947">
     <div class="card-top text-center">
       <i class="fa-solid fa-scale-balanced text-primary mb-2 fs-1"></i>
       <h5 class="fs-5 mb-0">Artículo 6° / Decreto 947</h5>
@@ -126,15 +130,16 @@
         <i class="fa-solid fa-chevron-down"></i>
       </button>
     </div>
-    <div class="servicio-descripcion">
-      <p class="mt-3 mb-0">Tramitación previa a construcciones o subdivisiones según Ley Provincial. Cumplimiento legal para presentación municipal.</p>
+    <div class="servicio-descripcion text-center">
+      <p class="mt-3 mb-3">Tramitación previa a construcciones o subdivisiones según Ley Provincial. Cumplimiento legal para presentación municipal.</p>
+      <a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
     </div>
   </div>
 </div>
 
 <!-- Relevamientos Topográficos -->
 <div class="col-md-6 col-lg-4">
-  <div class="servicio-card-expandible">
+  <div class="servicio-card-expandible" data-servicio="Relevamientos Topográficos">
     <div class="card-top text-center">
       <i class="fa-solid fa-ruler-combined text-primary mb-2 fs-1"></i>
       <h5 class="fs-5 mb-0">Relevamientos Topográficos</h5>
@@ -142,15 +147,16 @@
         <i class="fa-solid fa-chevron-down"></i>
       </button>
     </div>
-    <div class="servicio-descripcion">
-      <p class="mt-3 mb-0">Obtención de datos altimétricos y planimétricos con GNSS y estación total. Fundamental para obras, loteos y documentación catastral.</p>
+    <div class="servicio-descripcion text-center">
+      <p class="mt-3 mb-3">Obtención de datos altimétricos y planimétricos con GNSS y estación total. Esenciales para obras civiles, loteos y catastros.</p>
+      <a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
     </div>
   </div>
 </div>
 
 <!-- Replanteos de Obra -->
 <div class="col-md-6 col-lg-4">
-  <div class="servicio-card-expandible">
+  <div class="servicio-card-expandible" data-servicio="Replanteos de Obra">
     <div class="card-top text-center">
       <i class="fa-solid fa-drafting-compass text-primary mb-2 fs-1"></i>
       <h5 class="fs-5 mb-0">Replanteos de Obra</h5>
@@ -158,15 +164,16 @@
         <i class="fa-solid fa-chevron-down"></i>
       </button>
     </div>
-    <div class="servicio-descripcion">
-      <p class="mt-3 mb-0">Traslado del proyecto al terreno. Marcado de ejes, cotas y niveles con precisión para asegurar fidelidad constructiva.</p>
+    <div class="servicio-descripcion text-center">
+      <p class="mt-3 mb-3">Marcado de ejes, cotas y niveles en el terreno a partir del plano. Precisión para construcción segura y eficiente.</p>
+      <a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
     </div>
   </div>
 </div>
 
 <!-- Nivelaciones -->
 <div class="col-md-6 col-lg-4">
-  <div class="servicio-card-expandible">
+  <div class="servicio-card-expandible" data-servicio="Nivelaciones">
     <div class="card-top text-center">
       <i class="fa-solid fa-water text-primary mb-2 fs-1"></i>
       <h5 class="fs-5 mb-0">Nivelaciones</h5>
@@ -174,8 +181,9 @@
         <i class="fa-solid fa-chevron-down"></i>
       </button>
     </div>
-    <div class="servicio-descripcion">
-      <p class="mt-3 mb-0">Medición de pendientes y cotas para escurrimiento, drenaje, caminos o planificación urbana y sanitaria.</p>
+    <div class="servicio-descripcion text-center">
+      <p class="mt-3 mb-3">Medición de cotas y pendientes. Ideal para escurrimientos, caminos rurales, obras hidráulicas y planificación urbana.</p>
+      <a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
     </div>
   </div>
 </div>
@@ -318,10 +326,11 @@
     }
   </style>
 <!-- BOTON WHATSAPP FLOTANTE -->
-<a href="https://wa.me/5492211234567" class="whatsapp-float" target="_blank" aria-label="Enviar WhatsApp">
+<a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)" aria-label="Enviar WhatsApp">
   <i class="fab fa-whatsapp"></i>
-  <span class="tooltip-whatsapp">¿Necesitás ayuda?</span>
 </a>
+
+
 
 
 
