@@ -1,24 +1,10 @@
+/* GENERAL */
 body {
   font-family: 'Poppins', sans-serif;
-}
-.hero {
-  height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.jpg') center/cover no-repeat;
+  color: #111;
 }
 
-.whatsapp-float {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background-color: #25D366;
-  color: white;
-  font-size: 28px;
-  padding: 12px 16px;
-  border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  z-index: 999;
-  text-decoration: none;
-}
+/* NAVBAR */
 .latitud-navbar {
   background-color: #1c1c1e;
   padding-top: 1rem;
@@ -40,38 +26,8 @@ body {
     padding-bottom: 0.5rem;
   }
 }
-/* HERO ANIMACIÓN CON LUPA */
 
-.hero {
-  height: 100vh;
-  overflow: hidden;
-  background-color: black;
-  position: relative;
-}
-
-.hero-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.mask-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  -webkit-mask-image: radial-gradient(circle 0px at 50% 50%, black 100%, transparent 100%);
-  mask-image: radial-gradient(circle 0px at 50% 50%, black 100%, transparent 100%);
-  z-index: 2;
-}
-/* HERO cinemático */
-
+/* HERO CINEMÁTICO + MÁSCARA CATÁSTRO */
 .hero {
   height: 100vh;
   overflow: hidden;
@@ -104,48 +60,6 @@ body {
   transition: opacity 2s ease-in-out;
 }
 
-.hero-title {
-  opacity: 0;
-  animation: fadeInText 3s ease-out 1s forwards;
-}
-
-@keyframes fadeInText {
-  to { opacity: 1; }
-}
-.hero {
-  height: 100vh;
-  overflow: hidden;
-  background-color: black;
-  position: relative;
-}
-
-.hero-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-  transition: opacity 2s ease-in-out;
-}
-
-/* Máscara del catastro */
-.mask-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0; left: 0;
-  pointer-events: none;
-  -webkit-mask-image: radial-gradient(circle 0px at 50% 50%, black 100%, transparent 100%);
-  mask-image: radial-gradient(circle 0px at 50% 50%, black 100%, transparent 100%);
-  opacity: 0;
-  z-index: 2;
-  transition: opacity 2s ease-in-out;
-}
-
-/* Capa oscura sobre fondo */
 .hero-overlay {
   position: absolute;
   width: 100%;
@@ -154,7 +68,6 @@ body {
   z-index: 3;
 }
 
-/* Texto central */
 .hero-title {
   opacity: 0;
   animation: fadeInText 3s ease-out 1s forwards;
@@ -164,6 +77,23 @@ body {
 @keyframes fadeInText {
   to { opacity: 1; }
 }
+
+/* WHATSAPP FLOAT BUTTON */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25D366;
+  color: white;
+  font-size: 28px;
+  padding: 12px 16px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  z-index: 999;
+  text-decoration: none;
+}
+
+/* SERVICIOS CARDS */
 .servicio-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid #dee2e6;
@@ -184,8 +114,9 @@ body {
   margin-bottom: 20px;
 }
 
-.curvas-fondo {
-  background-image: url('images/curvas-fondo.png'); /* reemplazar con tu imagen */
+/* FONDOS CON CURVAS - CLARO */
+.curvas-fondo-claro {
+  background-image: url('images/curvas-fondo.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -194,22 +125,94 @@ body {
   z-index: 1;
 }
 
-.curvas-fondo::before {
+.curvas-fondo-claro::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.75);
   z-index: -1;
 }
-.fondo-oscuro {
-  background-color: #1c1c1e;
-  color: white;
+
+.curvas-fondo-claro h2,
+.curvas-fondo-claro h4,
+.curvas-fondo-claro p {
+  color: #111;
 }
 
-.fondo-oscuro h2,
-.fondo-oscuro h5,
-.fondo-oscuro p,
-.fondo-oscuro li {
-  color: white;
+/* FONDOS CON CURVAS - OSCURO */
+.curvas-fondo-oscuro {
+  background-image: url('images/curvas-fondo-dark.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+}
+
+.curvas-fondo-oscuro::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.curvas-fondo-oscuro h2,
+.curvas-fondo-oscuro h4,
+.curvas-fondo-oscuro p,
+.curvas-fondo-oscuro li,
+.curvas-fondo-oscuro .nav-link {
+  color: #fff;
+}
+
+/* NAV PILLS en fondo oscuro */
+.curvas-fondo-oscuro .nav-link.active {
+  background-color: #0d6efd;
+  color: #fff !important;
+}
+
+.curvas-fondo-oscuro .nav-link:not(.active):hover {
+  color: #ffffff;
+  opacity: 0.85;
+}
+
+/* TARJETAS EN FONDO OSCURO */
+.curvas-fondo-oscuro .card {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.curvas-fondo-oscuro .card h5,
+.curvas-fondo-oscuro .card p {
+  color: #fff;
+}
+#agrimensura .nav-link {
+  background-color: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.2);
+  margin-bottom: 10px;
+  border-radius: 8px;
+  text-align: left;
+  padding: 15px 20px;
+  transition: all 0.3s ease;
+}
+
+#agrimensura .nav-link.active {
+  background-color: #0d6efd;
+  color: #fff !important;
+  border-color: #0a58ca;
+}
+
+#agrimensura .nav-link:hover {
+  background-color: rgba(255,255,255,0.15);
+}
+
+#agrimensura .tab-content {
+  background-color: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  padding: 30px;
 }
