@@ -616,3 +616,22 @@ body {
   font-size: 1rem;
   color: #ccc;
 }
+/* seccion nosotros curva svg blanca */
+.custom-shape-divider-bottom-1700000000 {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.custom-shape-divider-bottom-1700000000 svg {
+  display: block;
+  width: 100%;
+  height: 80px;
+}
+
+.custom-shape-divider-bottom-1700000000 path {
+  fill: #f8f9fa; /* Color claro de la siguiente sección */
+}
