@@ -64,81 +64,127 @@
 </header>
 
 
-  <!-- AGRIMENSURA -->
-  <section id="agrimensura" class="section py-5 position-relative curvas-fondo-oscuro">
-    <div class="container">
-      <h2 class="text-center mb-5">Agrimensura</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="nav flex-column nav-pills me-3" id="agrimensura-tab" role="tablist" aria-orientation="vertical">
-            <button class="nav-link active" id="tab-parcelario" data-bs-toggle="pill" data-bs-target="#content-parcelario" type="button" role="tab">Estado Parcelario</button>
-            <button class="nav-link" id="tab-deslinde" data-bs-toggle="pill" data-bs-target="#content-deslinde" type="button" role="tab">Deslinde y Amojonamiento</button>
-            <button class="nav-link" id="tab-subdivisiones" data-bs-toggle="pill" data-bs-target="#content-subdivisiones" type="button" role="tab">Subdivisiones</button>
-            <button class="nav-link" id="tab-articulo6" data-bs-toggle="pill" data-bs-target="#content-articulo6" type="button" role="tab">Artículo 6° / Decreto 947</button>
-          </div>
-        </div>
-  
-        <div class="col-md-8">
-          <div class="tab-content" id="agrimensura-tabContent">
-            <div class="tab-pane fade show active" id="content-parcelario" role="tabpanel">
-              <h4>Estado Parcelario</h4>
-              <p>Documento técnico-legal obligatorio en Buenos Aires para verificar las condiciones físicas y jurídicas de un inmueble. Requisito para la escrituración y el registro catastral.</p>
-            </div>
-            <div class="tab-pane fade" id="content-deslinde" role="tabpanel">
-              <h4>Deslinde y Amojonamiento</h4>
-              <p>Proceso técnico que determina los límites legales de una propiedad. Incluye la colocación de mojones o hitos visibles que evitan conflictos con vecinos.</p>
-            </div>
-            <div class="tab-pane fade" id="content-subdivisiones" role="tabpanel">
-              <h4>Subdivisiones</h4>
-              <p>División de parcelas en unidades más pequeñas, cumpliendo con normas de Geodesia o Propiedad Horizontal. Necesario para desarrollos inmobiliarios o herencias.</p>
-            </div>
-            <div class="tab-pane fade" id="content-articulo6" role="tabpanel">
-              <h4>Artículo 6° / Decreto 947</h4>
-              <p>Asesoramiento y ejecución de trámites según normativas de ordenamiento territorial. Requisitos previos para subdividir o construir según la Ley Provincial.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+<section id="servicios" class="section py-5 curvas-fondo-claro">
+  <div class="container">
+    <h2 class="text-center mb-5 text-white">Servicios</h2>
+    <div class="row g-4">
+<!-- Estado Parcelario -->
+<div class="col-md-6 col-lg-4">
+  <div class="servicio-card-expandible">
+    <div class="card-top text-center">
+      <i class="fa-solid fa-file-signature text-primary mb-2 fs-1"></i>
+      <h5 class="fs-5 mb-0">Estado Parcelario</h5>
+      <button class="toggle-chevron mt-2" onclick="toggleDescripcion(this)">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
     </div>
-  </section>
-  
+    <div class="servicio-descripcion">
+      <p class="mt-3 mb-0">Verificación legal y física de inmuebles. Obligatorio para escrituración y registro catastral en la Provincia de Buenos Aires.</p>
+    </div>
+  </div>
+</div>
 
-  <!-- TOPOGRAFÍA -->
-  <section id="topografia" class="section py-5 bg-light position-relative curvas-fondo-oscuro">
-    <div class="container">
-      <h2 class="text-center mb-5">Topografía</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="nav flex-column nav-pills me-3" id="topografia-tab" role="tablist" aria-orientation="vertical">
-            <button class="nav-link active" id="tab-relevamientos" data-bs-toggle="pill" data-bs-target="#content-relevamientos" type="button" role="tab">Relevamientos</button>
-            <button class="nav-link" id="tab-replanteos" data-bs-toggle="pill" data-bs-target="#content-replanteos" type="button" role="tab">Replanteos</button>
-            <button class="nav-link" id="tab-nivelaciones" data-bs-toggle="pill" data-bs-target="#content-nivelaciones" type="button" role="tab">Nivelaciones</button>
-          </div>
-        </div>
-  
-        <div class="col-md-8">
-          <div class="tab-content" id="topografia-tabContent">
-            <div class="tab-pane fade show active" id="content-relevamientos" role="tabpanel">
-              <h4>Relevamientos Topográficos</h4>
-              <p>Obtención precisa de datos altimétricos y planimétricos mediante GNSS y estaciones totales. Esenciales para obras civiles, loteos y documentación catastral.</p>
-            </div>
-            <div class="tab-pane fade" id="content-replanteos" role="tabpanel">
-              <h4>Replanteos de Obra</h4>
-              <p>Traslado de planos al terreno para ejecución de obras. Se marcan puntos, ejes y cotas para garantizar fidelidad constructiva.</p>
-            </div>
-            <div class="tab-pane fade" id="content-nivelaciones" role="tabpanel">
-              <h4>Nivelaciones</h4>
-              <p>Determinación de cotas relativas y pendientes. Ideal para proyectos de drenaje, caminos, redes sanitarias y diseño urbano.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+<!-- Deslinde y Amojonamiento -->
+<div class="col-md-6 col-lg-4">
+  <div class="servicio-card-expandible">
+    <div class="card-top text-center">
+      <i class="fa-solid fa-map-location-dot text-primary mb-2 fs-1"></i>
+      <h5 class="fs-5 mb-0">Deslinde y Amojonamiento</h5>
+      <button class="toggle-chevron mt-2" onclick="toggleDescripcion(this)">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
     </div>
-  </section>
+    <div class="servicio-descripcion">
+      <p class="mt-3 mb-0">Determinación de límites con mojones. Evita conflictos con vecinos y asegura la correcta delimitación de la propiedad.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Subdivisiones -->
+<div class="col-md-6 col-lg-4">
+  <div class="servicio-card-expandible">
+    <div class="card-top text-center">
+      <i class="fa-solid fa-diagram-project text-primary mb-2 fs-1"></i>
+      <h5 class="fs-5 mb-0">Subdivisiones</h5>
+      <button class="toggle-chevron mt-2" onclick="toggleDescripcion(this)">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+    <div class="servicio-descripcion">
+      <p class="mt-3 mb-0">Fraccionamiento de parcelas conforme a normativa provincial. Ideal para herencias, desarrollos inmobiliarios o venta de lotes.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Artículo 6° / Decreto 947 -->
+<div class="col-md-6 col-lg-4">
+  <div class="servicio-card-expandible">
+    <div class="card-top text-center">
+      <i class="fa-solid fa-scale-balanced text-primary mb-2 fs-1"></i>
+      <h5 class="fs-5 mb-0">Artículo 6° / Decreto 947</h5>
+      <button class="toggle-chevron mt-2" onclick="toggleDescripcion(this)">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+    <div class="servicio-descripcion">
+      <p class="mt-3 mb-0">Tramitación previa a construcciones o subdivisiones según Ley Provincial. Cumplimiento legal para presentación municipal.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Relevamientos Topográficos -->
+<div class="col-md-6 col-lg-4">
+  <div class="servicio-card-expandible">
+    <div class="card-top text-center">
+      <i class="fa-solid fa-ruler-combined text-primary mb-2 fs-1"></i>
+      <h5 class="fs-5 mb-0">Relevamientos Topográficos</h5>
+      <button class="toggle-chevron mt-2" onclick="toggleDescripcion(this)">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+    <div class="servicio-descripcion">
+      <p class="mt-3 mb-0">Obtención de datos altimétricos y planimétricos con GNSS y estación total. Fundamental para obras, loteos y documentación catastral.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Replanteos de Obra -->
+<div class="col-md-6 col-lg-4">
+  <div class="servicio-card-expandible">
+    <div class="card-top text-center">
+      <i class="fa-solid fa-drafting-compass text-primary mb-2 fs-1"></i>
+      <h5 class="fs-5 mb-0">Replanteos de Obra</h5>
+      <button class="toggle-chevron mt-2" onclick="toggleDescripcion(this)">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+    <div class="servicio-descripcion">
+      <p class="mt-3 mb-0">Traslado del proyecto al terreno. Marcado de ejes, cotas y niveles con precisión para asegurar fidelidad constructiva.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Nivelaciones -->
+<div class="col-md-6 col-lg-4">
+  <div class="servicio-card-expandible">
+    <div class="card-top text-center">
+      <i class="fa-solid fa-water text-primary mb-2 fs-1"></i>
+      <h5 class="fs-5 mb-0">Nivelaciones</h5>
+      <button class="toggle-chevron mt-2" onclick="toggleDescripcion(this)">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+    <div class="servicio-descripcion">
+      <p class="mt-3 mb-0">Medición de pendientes y cotas para escurrimiento, drenaje, caminos o planificación urbana y sanitaria.</p>
+    </div>
+  </div>
+</div>
+
+
   
   
 <!-- NOSOTROS -->
-<section id="nosotros" class="section py-5 curvas-fondo-claro">
+<section id="nosotros" class="section py-5 curvas-fondo-oscuro">
   <div class="container">
     <h2 class="text-center mb-5">Nosotros</h2>
     <div class="row align-items-center">
@@ -160,7 +206,7 @@
 
 
 <!-- TRABAJOS REALIZADOS -->
-<section id="trabajos" class="section py-5 position-relative curvas-fondo-oscuro">
+<section id="trabajos" class="section py-5 position-relative curvas-fondo-claro">
   <div class="container">
     <h2 class="text-center mb-5">Nuestros Trabajos</h2>
     <div class="row g-4">
@@ -196,7 +242,7 @@
 </section>
 
 <!-- CONTACTO COMBINADO -->
-<section id="contacto" class="section py-5 position-relative curvas-fondo-claro">
+<section id="contacto" class="section py-5 position-relative curvas-fondo-oscuro">
   <div class="container">
     <h2 class="text-center mb-5">Contacto</h2>
     <div class="row justify-content-center align-items-start">
