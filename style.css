@@ -446,3 +446,173 @@ body {
   color: #0d6efd !important;
   /* color: #333 !important; */
 }
+
+/* carrusel de trabajo */
+.trabajo-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.trabajo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.15);
+}
+
+.trabajo-card .card-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.trabajo-card .card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+/* swiper */
+.mySwiper {
+  padding: 20px 0;
+}
+
+.swiper-slide {
+  width: 300px;
+}
+
+.trabajo-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  height: 100%;
+}
+
+.trabajo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.15);
+}
+
+.trabajo-card .card-body {
+  padding: 15px;
+}
+
+.trabajo-card .card-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.trabajo-card .card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Flechas custom */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #0d6efd;
+  background: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #0d6efd;
+  color: white;
+}
+
+
+.mySwiper {
+  padding-bottom: 40px;
+}
+
+.swiper-slide {
+  width: 300px;
+}
+
+.trabajo-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  height: 100%;
+}
+
+.trabajo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.15);
+}
+
+.trabajo-card .card-body {
+  padding: 15px;
+}
+
+.trabajo-card .card-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.trabajo-card .card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #0d6efd;
+  background: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #0d6efd;
+  color: white;
+}
+
+/* estandarizar tamaño tarjetas swiper */
+.trabajo-card img {
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* nosotros */
+.persona-card {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.persona-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.persona-card img {
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.persona-card .card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.persona-card .card-text {
+  font-size: 1rem;
+  color: #ccc;
+}
