@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   
     const mensaje = `Hola, quiero hacer una consulta sobre ${servicio}.`;
-    const url = "https://wa.me/5492211234567?text=" + encodeURIComponent(mensaje);
+    const url = "https://wa.me/5492215573180?text=" + encodeURIComponent(mensaje);
     window.open(url, '_blank');
   }
   
