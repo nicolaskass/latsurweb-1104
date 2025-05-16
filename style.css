@@ -29,7 +29,7 @@ body {
 
 .hero {
   height: 100vh;
-  min-height: 600px; /* Evita que sea demasiado chico en pantallas pequeñas */
+  min-height: 600px; /* Mantiene proporción en pantallas chicas */
   overflow: hidden;
   background-color: black;
   position: relative;
@@ -38,46 +38,40 @@ body {
   justify-content: center;
 }
 
-.hero-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-  transition: opacity 2s ease-in-out;
-  animation: zoomHero 20s ease-in-out infinite alternate;
-}
-
-.mask-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0; left: 0;
-  pointer-events: none;
-  -webkit-mask-image: radial-gradient(circle 0px at 50% 50%, black 100%, transparent 100%);
-  mask-image: radial-gradient(circle 0px at 50% 50%, black 100%, transparent 100%);
-  opacity: 0;
-  z-index: 2;
-  transition: opacity 2s ease-in-out;
-}
-
+/* Hero overlay oscuro arriba de todo */
 .hero-overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.55); /* más oscura */
+  background: rgba(0, 0, 0, 0.55);
   z-index: 2;
 }
 
+/* Imágenes del carrusel */
+.hero-img {
+  object-fit: cover;
+  height: 100vh;
+  width: 100%;
+  animation: zoomHero 20s ease-in-out infinite alternate;
+}
+
+/* Transiciones suaves del carrusel */
+.carousel-inner {
+  height: 100vh;
+}
+
+.carousel-item {
+  height: 100vh;
+}
+
+/* Título */
 .hero-title {
   opacity: 0;
   animation: fadeInText 3s ease-out 1s forwards;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 }
 
+/* Animaciones */
 @keyframes fadeInText {
   to { opacity: 1; }
 }
@@ -86,6 +80,7 @@ body {
   0% { transform: scale(1); }
   100% { transform: scale(1.05); }
 }
+
 
 
 /* WHATSAPP FLOAT BUTTON */
