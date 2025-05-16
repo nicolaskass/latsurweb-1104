@@ -1,4 +1,13 @@
 /* GENERAL */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   color: #111;
@@ -27,42 +36,71 @@ body {
   }
 }
 
-.hero {
-  height: 100vh;
-  min-height: 600px; /* Mantiene proporción en pantallas chicas */
-  overflow: hidden;
-  background-color: black;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 /* Hero overlay oscuro arriba de todo */
-.hero-overlay {
+/* .hero-overlay {
   position: absolute;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.55);
   z-index: 2;
-}
+} */
+
 
 /* Imágenes del carrusel */
 .hero-img {
-  object-fit: cover;
-  height: 100vh;
   width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
   animation: zoomHero 20s ease-in-out infinite alternate;
+  filter: brightness(60%); /* ⬅️ Oscurece la imagen directamente */
 }
 
-/* Transiciones suaves del carrusel */
+
+/* Carrusel contenedor */
 .carousel-inner {
+  position: relative;
+  width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 
+/* Items del carrusel con fade real (sin fondo negro entre transiciones) */
 .carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100vh;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 1s ease-in-out;
+  background-color: transparent !important; /* ← evita el fondo negro */
 }
+
+
+.carousel-item.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Fondo general negro solo para respaldo, no en fade */
+.hero {
+  background-color: #000;
+}
+.carousel-inner,
+.carousel {
+  background-color: transparent !important;
+}
+
+/* Animación de zoomHero */
+@keyframes zoomHero {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+
+
 
 /* Título */
 .hero-title {
@@ -80,6 +118,7 @@ body {
   0% { transform: scale(1); }
   100% { transform: scale(1.05); }
 }
+
 
 
 
@@ -640,3 +679,4 @@ body {
 .custom-shape-divider-bottom-1700000000 path {
   fill: #f8f9fa; /* Color claro de la siguiente sección */
 }
+
