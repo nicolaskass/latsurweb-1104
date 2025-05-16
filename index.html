@@ -47,15 +47,15 @@
   <div class="hero-overlay"></div>
 
   <!-- Etapas del hero -->
-  <img src="images/hero-1-satelital.png" class="hero-img stage stage-1" />
+  <img src="images/nivel-nikon.png" class="hero-img stage stage-1" />
   
   <div class="mask-container stage stage-2">
-    <img src="images/hero-2-catastro.png" class="hero-img" />
+    <img src="images/dron-loteo.png" class="hero-img" />
   </div>
 
-  <img src="images/hero-3-dron.png" class="hero-img stage stage-3" />
-  <img src="images/hero-4-gnss.png" class="hero-img stage stage-4" />
-  <img src="images/hero-5-amojonamiento.png" class="hero-img stage stage-5" />
+  <img src="images/saneamiento1.jpg" class="hero-img stage stage-3" />
+  <img src="images/trimble.jpg" class="hero-img stage stage-4" />
+  <!-- <img src="images/hero-5-amojonamiento.png" class="hero-img stage stage-5" /> -->
 
   <!-- Texto -->
   <div class="container position-absolute top-50 start-50 translate-middle text-white text-center" style="z-index: 5;">
@@ -453,7 +453,28 @@
   });
 </script>
 
+<!-- Hero ciclico -->
+<script>
+  const stages = document.querySelectorAll('.hero-img, .mask-container');
+  let current = 0;
 
+  function showStage(index) {
+    stages.forEach((el, i) => {
+      el.style.opacity = (i === index) ? '1' : '0';
+    });
+  }
+
+  function nextStage() {
+    current = (current + 1) % stages.length;
+    showStage(current);
+  }
+
+  // Inicial
+  showStage(current);
+
+  // Cambia cada 6 segundos
+  setInterval(nextStage, 6000);
+</script>
 
 
 
