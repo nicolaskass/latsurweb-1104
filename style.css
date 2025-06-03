@@ -256,6 +256,8 @@ body {
   background-attachment: fixed;
   position: relative;
   z-index: 1;
+  min-height: 100vh; /* o una altura mínima razonable */
+  padding: 5rem 0;
 }
 
 .curvas-fondo-oscuro::before {
@@ -630,6 +632,11 @@ body {
 
 
 /* nosotros */
+.curvas-fondo-oscuro {
+  background-color: #000; /* o el color de fondo que estés usando */
+  color: #fff; /* opcional, si querés texto blanco también */
+}
+
 .persona-card {
   background-color: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
