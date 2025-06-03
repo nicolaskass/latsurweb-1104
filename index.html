@@ -1,367 +1,448 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <!-- HEAD -->
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Latitud Sur - Agrimensura y Topografía</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
-<link href="images/icono-ls.ico" rel="icon" type="image/x-icon"/>
-<link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet">
-</link></link></head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Latitud Sur - Agrimensura y Topografía</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="images/icono-ls.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  </head>
+
 <!-- BODY -->
 <body>
-<!-- NAV -->
+ <!-- NAV -->
 <nav class="navbar navbar-expand-lg navbar-dark latitud-navbar">
-<div class="container align-items-center">
-<a class="navbar-brand" href="#">
-<img alt="Latitud Sur" class="logo-navbar" src="images/logo.png"/>
-</a>
-<button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarNav">
-<ul class="navbar-nav ms-auto">
-<li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-<li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
-<li class="nav-item"><a class="nav-link" href="#trabajos">Trabajos</a></li>
-<li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-</ul>
-</div>
-</div>
+  <div class="container align-items-center">
+    <a class="navbar-brand" href="#">
+      <img src="images/logo.png" alt="Latitud Sur" class="logo-navbar">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="#trabajos">Trabajos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
+
+
 <!-- HERO CAROUSEL -->
 <header class="hero position-relative">
-<!-- Overlay oscuro controlado por CSS -->
+
+  <!-- Overlay oscuro controlado por CSS -->
 <!-- <div class="hero-overlay"></div> -->
-<div class="carousel slide carousel-fade" data-bs-interval="4000" data-bs-ride="carousel" id="heroCarousel">
-<div class="carousel-inner">
-<div class="carousel-item active">
-<img alt="Nivel Nikon" class="hero-img" src="images/nivel-nikon.png"/>
+
+
+<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+  <div class="carousel-inner">
+    
+    <div class="carousel-item active">
+      <img src="images/nivel-nikon.png" class="hero-img" alt="Nivel Nikon">
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/dron-loteo.png" class="hero-img" alt="Dron sobre loteo">
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/saneamiento1.jpg" class="hero-img" alt="Saneamiento topográfico">
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/estacionobra.png" class="hero-img" alt="Estación total">
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/cad.png" class="hero-img" alt="AutoCAD en uso">
+    </div>
+
+  </div>
 </div>
-<div class="carousel-item">
-<img alt="Dron sobre loteo" class="hero-img" src="images/dron-loteo.png"/>
-</div>
-<div class="carousel-item">
-<img alt="Saneamiento topográfico" class="hero-img" src="images/saneamiento1.jpg"/>
-</div>
-<div class="carousel-item">
-<img alt="Estación total" class="hero-img" src="images/estacionobra.png"/>
-</div>
-<div class="carousel-item">
-<img alt="AutoCAD en uso" class="hero-img" src="images/cad.png"/>
-</div>
-</div>
-</div>
-<!-- Texto encima del carrusel -->
-<div class="container position-absolute top-50 start-50 translate-middle text-white text-center" style="z-index: 3;">
-<h1 class="display-5 fw-bold hero-title">Llevamos tu proyecto al próximo nivel.</h1>
-</div>
+
+  <!-- Texto encima del carrusel -->
+  <div class="container position-absolute top-50 start-50 translate-middle text-white text-center" style="z-index: 3;">
+    <h1 class="display-5 fw-bold hero-title">Llevamos tu proyecto al próximo nivel.</h1>
+  </div>
 </header>
-<section class="section py-5 curvas-fondo-claro" id="servicios">
-<div class="container">
-<h2 class="text-center mb-5 text-white">Servicios</h2>
-<div class="row g-4">
+
+
+
+<section id="servicios" class="section py-5 curvas-fondo-claro">
+  <div class="container">
+    <h2 class="text-center mb-5 text-white">Servicios</h2>
+    <div class="row g-4">
 <!-- Estado Parcelario -->
 <!-- Estado Parcelario -->
 <div class="col-md-6 col-lg-4">
-<div class="servicio-card-expandible" data-servicio="Estado Parcelario">
-<div class="card-top text-center">
-<i class="fa-solid fa-file-signature text-primary mb-2 fs-1"></i>
-<h5 class="fs-5 mb-0">Estado Parcelario</h5>
-<button class="toggle-chevron mt-2" onclick="toggleDescripcion(this)">
-<i class="fa-solid fa-chevron-down"></i>
-</button>
+  <div class="servicio-card-expandible" data-servicio="Estado Parcelario">
+    <div class="card-top text-center">
+      <i class="fa-solid fa-file-signature text-primary mb-2 fs-1"></i>
+      <h5 class="fs-5 mb-0">Estado Parcelario</h5>
+      <button class="toggle-chevron mt-2" onclick="toggleDescripcion(this)">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+    <div class="servicio-descripcion text-center">
+      <p class="mt-3 mb-3">Verificación legal y física de inmuebles. Obligatorio para escrituración y registro catastral en la Provincia de Buenos Aires.</p>
+      <a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
+    </div>
+  </div>
 </div>
-<div class="servicio-descripcion text-center">
-<p class="mt-3 mb-3">Verificación legal y física de inmuebles. Obligatorio para escrituración y registro catastral en la Provincia de Buenos Aires.</p>
-<a class="whatsapp-float-link" href="#" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
-</div>
-</div>
-</div>
+
 <!-- Deslinde y Amojonamiento -->
 <div class="col-md-6 col-lg-4">
-<div class="servicio-card-expandible" data-servicio="Deslinde y Amojonamiento">
-<div class="card-top text-center">
-<i class="fa-solid fa-map-location-dot text-primary mb-2 fs-1"></i>
-<h5 class="fs-5 mb-0">Deslinde y Amojonamiento</h5>
-<button class="toggle-chevron mt-2" onclick="toggleDescripcion(this)">
-<i class="fa-solid fa-chevron-down"></i>
-</button>
+  <div class="servicio-card-expandible" data-servicio="Deslinde y Amojonamiento">
+    <div class="card-top text-center">
+      <i class="fa-solid fa-map-location-dot text-primary mb-2 fs-1"></i>
+      <h5 class="fs-5 mb-0">Deslinde y Amojonamiento</h5>
+      <button class="toggle-chevron mt-2" onclick="toggleDescripcion(this)">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+    <div class="servicio-descripcion text-center">
+      <p class="mt-3 mb-3">Determinación de límites con mojones. Evita conflictos con vecinos y asegura la correcta delimitación de la propiedad.</p>
+      <a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
+    </div>
+  </div>
 </div>
-<div class="servicio-descripcion text-center">
-<p class="mt-3 mb-3">Determinación de límites con mojones. Evita conflictos con vecinos y asegura la correcta delimitación de la propiedad.</p>
-<a class="whatsapp-float-link" href="#" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
-</div>
-</div>
-</div>
+
 <!-- Subdivisiones -->
 <div class="col-md-6 col-lg-4">
-<div class="servicio-card-expandible" data-servicio="Subdivisiones">
-<div class="card-top text-center">
-<i class="fa-solid fa-diagram-project text-primary mb-2 fs-1"></i>
-<h5 class="fs-5 mb-0">Subdivisiones</h5>
-<button class="toggle-chevron mt-2" onclick="toggleDescripcion(this)">
-<i class="fa-solid fa-chevron-down"></i>
-</button>
+  <div class="servicio-card-expandible" data-servicio="Subdivisiones">
+    <div class="card-top text-center">
+      <i class="fa-solid fa-diagram-project text-primary mb-2 fs-1"></i>
+      <h5 class="fs-5 mb-0">Subdivisiones</h5>
+      <button class="toggle-chevron mt-2" onclick="toggleDescripcion(this)">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+    <div class="servicio-descripcion text-center">
+      <p class="mt-3 mb-3">Fraccionamiento de parcelas para herencias, desarrollos inmobiliarios o ventas. Cumplimiento técnico y legal garantizado.</p>
+      <a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
+    </div>
+  </div>
 </div>
-<div class="servicio-descripcion text-center">
-<p class="mt-3 mb-3">Fraccionamiento de parcelas para herencias, desarrollos inmobiliarios o ventas. Cumplimiento técnico y legal garantizado.</p>
-<a class="whatsapp-float-link" href="#" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
-</div>
-</div>
-</div>
+
 <!-- Artículo 6° / Decreto 947 -->
 <div class="col-md-6 col-lg-4">
-<div class="servicio-card-expandible" data-servicio="Artículo 6° / Decreto 947">
-<div class="card-top text-center">
-<i class="fa-solid fa-scale-balanced text-primary mb-2 fs-1"></i>
-<h5 class="fs-5 mb-0">Artículo 6° / Decreto 947</h5>
-<button class="toggle-chevron mt-2" onclick="toggleDescripcion(this)">
-<i class="fa-solid fa-chevron-down"></i>
-</button>
+  <div class="servicio-card-expandible" data-servicio="Artículo 6° / Decreto 947">
+    <div class="card-top text-center">
+      <i class="fa-solid fa-scale-balanced text-primary mb-2 fs-1"></i>
+      <h5 class="fs-5 mb-0">Artículo 6° / Decreto 947</h5>
+      <button class="toggle-chevron mt-2" onclick="toggleDescripcion(this)">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+    <div class="servicio-descripcion text-center">
+      <p class="mt-3 mb-3">Tramitación previa a construcciones o subdivisiones según Ley Provincial. Cumplimiento legal para presentación municipal.</p>
+      <a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
+    </div>
+  </div>
 </div>
-<div class="servicio-descripcion text-center">
-<p class="mt-3 mb-3">Tramitación previa a construcciones o subdivisiones según Ley Provincial. Cumplimiento legal para presentación municipal.</p>
-<a class="whatsapp-float-link" href="#" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
-</div>
-</div>
-</div>
+
 <!-- Relevamientos Topográficos -->
 <div class="col-md-6 col-lg-4">
-<div class="servicio-card-expandible" data-servicio="Relevamientos Topográficos">
-<div class="card-top text-center">
-<i class="fa-solid fa-ruler-combined text-primary mb-2 fs-1"></i>
-<h5 class="fs-5 mb-0">Relevamientos Topográficos</h5>
-<button class="toggle-chevron mt-2" onclick="toggleDescripcion(this)">
-<i class="fa-solid fa-chevron-down"></i>
-</button>
+  <div class="servicio-card-expandible" data-servicio="Relevamientos Topográficos">
+    <div class="card-top text-center">
+      <i class="fa-solid fa-ruler-combined text-primary mb-2 fs-1"></i>
+      <h5 class="fs-5 mb-0">Relevamientos Topográficos</h5>
+      <button class="toggle-chevron mt-2" onclick="toggleDescripcion(this)">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+    <div class="servicio-descripcion text-center">
+      <p class="mt-3 mb-3">Obtención de datos altimétricos y planimétricos con GNSS y estación total. Esenciales para obras civiles, loteos y catastros.</p>
+      <a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
+    </div>
+  </div>
 </div>
-<div class="servicio-descripcion text-center">
-<p class="mt-3 mb-3">Obtención de datos altimétricos y planimétricos con GNSS y estación total. Esenciales para obras civiles, loteos y catastros.</p>
-<a class="whatsapp-float-link" href="#" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
-</div>
-</div>
-</div>
+
 <!-- Replanteos de Obra -->
 <div class="col-md-6 col-lg-4">
-<div class="servicio-card-expandible" data-servicio="Replanteos de Obra">
-<div class="card-top text-center">
-<i class="fa-solid fa-drafting-compass text-primary mb-2 fs-1"></i>
-<h5 class="fs-5 mb-0">Replanteos de Obra</h5>
-<button class="toggle-chevron mt-2" onclick="toggleDescripcion(this)">
-<i class="fa-solid fa-chevron-down"></i>
-</button>
+  <div class="servicio-card-expandible" data-servicio="Replanteos de Obra">
+    <div class="card-top text-center">
+      <i class="fa-solid fa-drafting-compass text-primary mb-2 fs-1"></i>
+      <h5 class="fs-5 mb-0">Replanteos de Obra</h5>
+      <button class="toggle-chevron mt-2" onclick="toggleDescripcion(this)">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+    <div class="servicio-descripcion text-center">
+      <p class="mt-3 mb-3">Marcado de ejes, cotas y niveles en el terreno a partir del plano. Precisión para construcción segura y eficiente.</p>
+      <a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
+    </div>
+  </div>
 </div>
-<div class="servicio-descripcion text-center">
-<p class="mt-3 mb-3">Marcado de ejes, cotas y niveles en el terreno a partir del plano. Precisión para construcción segura y eficiente.</p>
-<a class="whatsapp-float-link" href="#" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
-</div>
-</div>
-</div>
+
 <!-- Nivelaciones -->
 <div class="col-md-6 col-lg-4">
-<div class="servicio-card-expandible" data-servicio="Nivelaciones">
-<div class="card-top text-center">
-<i class="fa-solid fa-water text-primary mb-2 fs-1"></i>
-<h5 class="fs-5 mb-0">Nivelaciones</h5>
-<button class="toggle-chevron mt-2" onclick="toggleDescripcion(this)">
-<i class="fa-solid fa-chevron-down"></i>
-</button>
+  <div class="servicio-card-expandible" data-servicio="Nivelaciones">
+    <div class="card-top text-center">
+      <i class="fa-solid fa-water text-primary mb-2 fs-1"></i>
+      <h5 class="fs-5 mb-0">Nivelaciones</h5>
+      <button class="toggle-chevron mt-2" onclick="toggleDescripcion(this)">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+    <div class="servicio-descripcion text-center">
+      <p class="mt-3 mb-3">Medición de cotas y pendientes. Ideal para escurrimientos, caminos rurales, obras hidráulicas y planificación urbana.</p>
+      <a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
+    </div>
+  </div>
 </div>
-<div class="servicio-descripcion text-center">
-<p class="mt-3 mb-3">Medición de cotas y pendientes. Ideal para escurrimientos, caminos rurales, obras hidráulicas y planificación urbana.</p>
-<a class="whatsapp-float-link" href="#" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
-</div>
-</div>
-</div>
+
+
+  
+  
 <!-- NOSOTROS -->
+<section id="nosotros" class="section py-5 curvas-fondo-oscuro position-relative">
+  <div class="container">
+    <h2 class="text-center mb-5">Nosotros</h2>
 
-<!-- TRABAJOS REALIZADOS -->
-
-<section class="section py-5 curvas-fondo-oscuro position-relative" id="nosotros">
-<div class="container">
-<h2 class="text-center mb-5">Nosotros</h2>
-<!-- Descripción institucional -->
-<div class="row mb-5">
-<div class="col-lg-10 mx-auto text-center" data-aos="fade-in" data-aos-duration="1000">
-<p class="lead">
-<strong>Latitud Sur</strong> es un estudio profesional con base en La Plata dedicado a brindar servicios de topografía a todo el país y de agrimensura en la provincia de Buenos Aires. Con más de una década de experiencia combinada, nos especializamos en proyectos urbanos, rurales, viales e industriales, ofreciendo soluciones técnicas precisas y acompañamiento profesional en cada etapa del trabajo.
+    <!-- Descripción institucional -->
+    <div class="row mb-5">
+      <div class="col-lg-10 mx-auto text-center" data-aos="fade-in" data-aos-duration="1000">
+        <p class="lead">
+          <strong>Latitud Sur</strong> es un estudio profesional con base en La Plata dedicado a brindar servicios de topografía a todo el país y de agrimensura en la provincia de Buenos Aires. Con más de una década de experiencia combinada, nos especializamos en proyectos urbanos, rurales, viales e industriales, ofreciendo soluciones técnicas precisas y acompañamiento profesional en cada etapa del trabajo.
         </p>
-</div>
-</div>
-<!-- Tarjetas del equipo -->
-<div class="row g-4 justify-content-center">
-<!-- Martín Moccia -->
-<div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-<div class="card persona-card text-center h-100">
-<img alt="Martín Moccia" class="card-img-top rounded-top" src="images/moccia.jpg" style="object-position: top;"/>
-<div class="card-body">
-<h5 class="card-title">Martín Moccia</h5>
-<p class="card-text">
+      </div>
+    </div>
+
+    <!-- Tarjetas del equipo -->
+    <div class="row g-4 justify-content-center">
+      <!-- Martín Moccia -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card persona-card text-center h-100">
+          <img src="images/moccia.jpg" class="card-img-top rounded-top" alt="Martín Moccia" style="object-position: top;">
+          <div class="card-body">
+            <h5 class="card-title">Martín Moccia</h5>
+            <p class="card-text">
               Ingeniero Agrimensor con más de 10 años de experiencia en obras civiles, viales e hidráulicas. Ha desarrollado y ejecutado proyectos integrales desde el plano hasta el campo, realizando estados parcelarios, deslindes, amojonamientos, nivelaciones, replanteos de obra, traslados de cota, monitoreos y vuelos con dron, así como producción de planos CAD.
             </p>
-</div>
-</div>
-</div>
-<!-- Sebastián Saldivar -->
-<div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-<div class="card persona-card text-center h-100">
-<img alt="Sebastián Saldivar" class="card-img-top rounded-top" src="images/saldivar.jpg"/>
-<div class="card-body">
-<h5 class="card-title">Sebastián Saldivar</h5>
-<p class="card-text">
+          </div>
+        </div>
+      </div>
+
+      <!-- Sebastián Saldivar -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card persona-card text-center h-100">
+          <img src="images/saldivar.jpg" class="card-img-top rounded-top" alt="Sebastián Saldivar">
+          <div class="card-body">
+            <h5 class="card-title">Sebastián Saldivar</h5>
+            <p class="card-text">
               Agrimensor con más de una década de trayectoria en campo, especializado en obras públicas y privadas. Participó en numerosos proyectos topográficos y catastrales, incluyendo parcelamientos, nivelaciones, replanteos, obras hidráulicas, seguimiento con dron, y ejecución técnica desde el relevamiento hasta la documentación final.
             </p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- SVG curva inferior blanca -->
-<div class="custom-shape-divider-bottom-1700000000">
-<svg data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
-<path class="shape-fill" d="M0,0V46.29c47.4,22.6,103.77,35.82,162.14,38.22,86.09,3.61,172-16.54,258-21.52C566.19,55.86,652.86,82.8,738,97.5c98.55,16.88,197.44,9.37,294-17.7V0Z"></path>
-</svg>
-</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SVG curva inferior blanca
+  <div class="custom-shape-divider-bottom-1700000000">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+      preserveAspectRatio="none">
+      <path d="M0,0V46.29c47.4,22.6,103.77,35.82,162.14,38.22,86.09,3.61,172-16.54,258-21.52C566.19,55.86,652.86,82.8,738,97.5c98.55,16.88,197.44,9.37,294-17.7V0Z"
+        class="shape-fill"></path>
+    </svg>
+  </div> -->
 </section>
-<section class="section py-5 curvas-fondo-claro" id="trabajos">
-<div class="container">
-<h2 class="text-center mb-5">Nuestros Trabajos</h2>
-<div class="swiper mySwiper">
-<div class="swiper-wrapper">
-<!-- Slide 1 -->
-<div class="swiper-slide">
-<div class="card trabajo-card">
-<img alt="Ruta 2" class="card-img-top" src="images/ruta2.jpg"/>
-<div class="card-body">
-<h5 class="card-title">Ensanche de Ruta 2</h5>
-<p class="card-text">Relevamiento y replanteo de traza para ampliación de autopista provincial.</p>
-</div>
-</div>
-</div>
-<!-- Slide 2 -->
-<div class="swiper-slide">
-<div class="card trabajo-card">
-<img alt="Saneamiento" class="card-img-top" src="images/saneamiento.jpg"/>
-<div class="card-body">
-<h5 class="card-title">Obras de Saneamiento</h5>
-<p class="card-text">Nivelaciones para redes cloacales, pluviales y estaciones de bombeo.</p>
-</div>
-</div>
-</div>
-<!-- Slide 3 -->
-<div class="swiper-slide">
-<div class="card trabajo-card">
-<img alt="Urbanización" class="card-img-top" src="images/urbanizacion.jpg"/>
-<div class="card-body">
-<h5 class="card-title">Urbanización en La Plata</h5>
-<p class="card-text">Subdivisiones y gestiones catastrales para desarrollos inmobiliarios.</p>
-</div>
-</div>
-</div>
-<!-- Slide 4 -->
-<div class="swiper-slide">
-<div class="card trabajo-card">
-<img alt="Obra hidráulica" class="card-img-top" src="images/hidraulica.jpg"/>
-<div class="card-body">
-<h5 class="card-title">Obras Hidráulicas</h5>
-<p class="card-text">Nivelaciones para planificación de escurrimientos y drenajes.</p>
-</div>
-</div>
-</div>
-<!-- Slide 5 -->
-<div class="swiper-slide">
-<div class="card trabajo-card">
-<img alt="Replanteo" class="card-img-top" src="images/replanteo.jpg"/>
-<div class="card-body">
-<h5 class="card-title">Replanteos en Obra</h5>
-<p class="card-text">Marcado de ejes y cotas para obras civiles y viales.</p>
-</div>
-</div>
-</div>
-<!-- Slide 6 -->
-<div class="swiper-slide">
-<div class="card trabajo-card">
-<img alt="Camino rural" class="card-img-top" src="images/camino.jpg"/>
-<div class="card-body">
-<h5 class="card-title">Mejoras de Caminos</h5>
-<p class="card-text">Topografía para mantenimiento y estabilización de caminos rurales.</p>
-</div>
-</div>
-</div>
-<!-- Slide 7 -->
-<div class="swiper-slide">
-<div class="card trabajo-card">
-<img alt="Parque industrial" class="card-img-top" src="images/industrial.jpg"/>
-<div class="card-body">
-<h5 class="card-title">Parques Industriales</h5>
-<p class="card-text">Subdivisiones y proyectos técnicos para zonas industriales.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Flechas -->
-<div class="swiper-button-next"></div>
-<div class="swiper-button-prev"></div>
-</div>
-</div>
-<div class="swiper-pagination mt-4"></div>
+
+
+      <!-- Nicolás -->
+<!-- <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card persona-card text-center h-100">
+          <img src="images/kass.jpg" class="card-img-top rounded-top" alt="Nicolás Kass" style="object-position: top center;">
+          <div class="card-body">
+            <h5 class="card-title">Nicolás Kass</h5>
+            <p class="card-text">
+              Licenciado en Biología, docente e investigador con más de 20 años de experiencia en planificación y gestión de proyectos. Aporta una visión estratégica con fuerte base en tecnología, incluyendo sistemas de información geográfica (GIS), modelado, sensores remotos y soluciones digitales aplicadas a la agrimensura. Encargado de la gestión técnica, operativa y administrativa del estudio.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Cierre institucional -->
+    <!-- <div class="row mt-5"> -->
+      <!-- <div class="col-lg-10 mx-auto text-center"> -->
+        <!-- <p class="fst-italic text-light"> -->
+          <!-- Un equipo interdisciplinario comprometido con la precisión, la eficiencia y el acompañamiento profesional en cada proyecto. -->
+        <!-- </p> -->
+      <!-- </div> -->
+    <!-- </div> cierre container -->
+  <!-- </div> cierre container-fluid -->
+  
+
+
+
+
+
+<!-- TRABAJOS REALIZADOS -->
+<section id="trabajos" class="section py-5 curvas-fondo-claro">
+  <div class="container">
+    <h2 class="text-center mb-5">Nuestros Trabajos</h2>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="card trabajo-card">
+            <img src="images/ruta2.jpg" class="card-img-top" alt="Ruta 2">
+            <div class="card-body">
+              <h5 class="card-title">Ensanche de Ruta 2</h5>
+              <p class="card-text">Relevamiento y replanteo de traza para ampliación de autopista provincial.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="card trabajo-card">
+            <img src="images/saneamiento.jpg" class="card-img-top" alt="Saneamiento">
+            <div class="card-body">
+              <h5 class="card-title">Obras de Saneamiento</h5>
+              <p class="card-text">Nivelaciones para redes cloacales, pluviales y estaciones de bombeo.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="card trabajo-card">
+            <img src="images/urbanizacion.jpg" class="card-img-top" alt="Urbanización">
+            <div class="card-body">
+              <h5 class="card-title">Urbanización en La Plata</h5>
+              <p class="card-text">Subdivisiones y gestiones catastrales para desarrollos inmobiliarios.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="card trabajo-card">
+            <img src="images/hidraulica.jpg" class="card-img-top" alt="Obra hidráulica">
+            <div class="card-body">
+              <h5 class="card-title">Obras Hidráulicas</h5>
+              <p class="card-text">Nivelaciones para planificación de escurrimientos y drenajes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <div class="card trabajo-card">
+            <img src="images/replanteo.jpg" class="card-img-top" alt="Replanteo">
+            <div class="card-body">
+              <h5 class="card-title">Replanteos en Obra</h5>
+              <p class="card-text">Marcado de ejes y cotas para obras civiles y viales.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="swiper-slide">
+          <div class="card trabajo-card">
+            <img src="images/camino.jpg" class="card-img-top" alt="Camino rural">
+            <div class="card-body">
+              <h5 class="card-title">Mejoras de Caminos</h5>
+              <p class="card-text">Topografía para mantenimiento y estabilización de caminos rurales.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="swiper-slide">
+          <div class="card trabajo-card">
+            <img src="images/industrial.jpg" class="card-img-top" alt="Parque industrial">
+            <div class="card-body">
+              <h5 class="card-title">Parques Industriales</h5>
+              <p class="card-text">Subdivisiones y proyectos técnicos para zonas industriales.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Flechas -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+  <div class="swiper-pagination mt-4"></div>
 </section>
+
 <!-- CONTACTO COMBINADO -->
-<section class="section py-5 position-relative curvas-fondo-oscuro" id="contacto">
-<div class="container">
-<h2 class="text-center mb-5">Contacto</h2>
-<div class="row justify-content-center align-items-start">
-<!-- Información de contacto -->
-<div class="col-md-5 mb-4">
-<div class="bg-white p-4 rounded shadow h-100">
-<h5 class="mb-4">Información de Contacto</h5>
-<p><i class="fa fa-phone me-2 text-primary"></i><strong>Teléfono:</strong> (0221) 557-3180</p>
-<p><i class="fa fa-envelope me-2 text-primary"></i><strong>Email:</strong> martinmoccia@gmail.com</p>
-<p><i class="fa fa-map-marker-alt me-2 text-primary"></i><strong>Dirección:</strong> Av. 7, 525 - La Plata, Buenos Aires</p>
-<hr/>
-<p><i class="fa-brands fa-whatsapp me-2 text-success"></i><strong>WhatsApp:</strong> <a href="https://wa.me/5492215573180" target="_blank">Enviar mensaje</a></p>
-</div>
-</div>
-<!-- Formulario -->
-<div class="col-md-7 mb-4">
-<div class="bg-white p-4 rounded shadow h-100">
-<h5 class="mb-4">¿Necesitás un relevamiento o asesoramiento técnico?</h5>
-<form>
-<div class="mb-3">
-<input class="form-control" placeholder="Nombre" required="" type="text"/>
-</div>
-<div class="mb-3">
-<input class="form-control" placeholder="Correo Electrónico" required="" type="email"/>
-</div>
-<div class="mb-3">
-<textarea class="form-control" placeholder="Mensaje" required="" rows="4"></textarea>
-</div>
-<button class="btn btn-success w-100" type="submit">Enviar mensaje</button>
-</form>
-</div>
-</div>
-</div>
-</div>
+<section id="contacto" class="section py-5 position-relative curvas-fondo-oscuro">
+  <div class="container">
+    <h2 class="text-center mb-5">Contacto</h2>
+    <div class="row justify-content-center align-items-start">
+      
+      <!-- Información de contacto -->
+      <div class="col-md-5 mb-4">
+        <div class="bg-white p-4 rounded shadow h-100">
+          <h5 class="mb-4">Información de Contacto</h5>
+          <p><i class="fa fa-phone me-2 text-primary"></i><strong>Teléfono:</strong> (0221) 557-3180</p>
+          <p><i class="fa fa-envelope me-2 text-primary"></i><strong>Email:</strong> martinmoccia@gmail.com</p>
+          <p><i class="fa fa-map-marker-alt me-2 text-primary"></i><strong>Dirección:</strong> Av. 7, 525 - La Plata, Buenos Aires</p>
+          <hr>
+          <p><i class="fa-brands fa-whatsapp me-2 text-success"></i><strong>WhatsApp:</strong> <a href="https://wa.me/5492215573180" target="_blank">Enviar mensaje</a></p>
+        </div>
+      </div>
+
+      <!-- Formulario -->
+      <div class="col-md-7 mb-4">
+        <div class="bg-white p-4 rounded shadow h-100">
+          <h5 class="mb-4">¿Necesitás un relevamiento o asesoramiento técnico?</h5>
+          <form>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Nombre" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Correo Electrónico" required>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="4" placeholder="Mensaje" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Enviar mensaje</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
+
 <!-- GSAP -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
 <!-- Librería AOS -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
 <!-- Tu animación hero -->
 <script src="js/hero.js"></script>
+
 <!-- Inicialización de AOS -->
 <script src="js/aos-init.js"></script>
+
+
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
 <!-- Swiper -->
 <script>
   const isMobile = window.innerWidth < 768;
@@ -396,11 +477,19 @@
     }
   });
 </script>
-</div></div></section></body>
 
+
+
+
+
+</body>
+
+</body>
 </html>
+
+
 <!-- BOTON WHATSAPP FLOTANTE -->
-<style>
+  <style>
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -418,12 +507,21 @@
     }
   </style>
 <!-- BOTON WHATSAPP FLOTANTE -->
-<a aria-label="Enviar WhatsApp" class="whatsapp-float-link" href="#" onclick="enviarWhatsappDesde(this)">
-<i class="fab fa-whatsapp"></i>
+<a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)" aria-label="Enviar WhatsApp">
+  <i class="fab fa-whatsapp"></i>
 </a>
+
+
+
+
+
+
+
 <!-- FOOTER -->
 <footer class="footer text-white text-center py-3" style="background-color: #1c1c1e;">
-<div class="container">
-<p>© 2025 Latitud Sur - Agrimensura &amp; Topografía</p>
-</div>
+  <div class="container">
+    <p>&copy; 2025 Latitud Sur - Agrimensura & Topografía</p>
+  </div>
 </footer>
+
+
