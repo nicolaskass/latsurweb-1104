@@ -256,8 +256,6 @@ body {
   background-attachment: fixed;
   position: relative;
   z-index: 1;
-  min-height: 100vh; /* o una altura mínima razonable */
-  padding: 5rem 0;
 }
 
 .curvas-fondo-oscuro::before {
