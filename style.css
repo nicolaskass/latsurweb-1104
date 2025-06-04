@@ -462,7 +462,7 @@ body {
 }
 
 .servicio-card-expandible.expandida .servicio-descripcion {
-  max-height: 300px;
+  max-height: 9999px;
   opacity: 1;
 }
 /* .curvas-fondo-claro .servicio-card-expandible,
@@ -704,4 +704,59 @@ body {
 
 .custom-shape-divider-bottom-1700000000 path {
   fill: #f8f9fa; /* Color claro de la siguiente sección */
+}
+
+/* Sticky bar presupuesto */
+.sticky-bar {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.sticky-bar:hover {
+  background-color: #0b5ed7;
+}
+
+/* Mejora visual iconos servicios */
+.servicio-card-expandible i {
+  font-size: 2.7rem;
+  color: #0d6efd;
+  transition: transform 0.3s ease;
+}
+
+.servicio-card-expandible:hover i {
+  transform: scale(1.1);
+}
+
+/* Mejora hero */
+.hero-title {
+  font-size: 2.75rem;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+/* Botón CTA */
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.toggle-servicio {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.toggle-servicio:hover {
+  color: #0d6efd;
 }
