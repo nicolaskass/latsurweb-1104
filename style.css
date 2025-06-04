@@ -760,3 +760,8 @@ body {
 .toggle-servicio:hover {
   color: #0d6efd;
 }
+
+.hero-subtitle {
+  opacity: 0;
+  animation: fadeInText 3s ease-out 2s forwards;
+}
