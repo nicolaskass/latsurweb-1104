@@ -5,16 +5,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Latitud Sur - Agrimensura y Topografía</title>
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Font Awesome y Google Fonts -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+
+  <!-- AOS primero -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Tu estilo principal después -->
   <link rel="stylesheet" href="style.css"/>
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="icon" href="images/icono-ls.ico" type="image/x-icon">
+
+  <!-- Swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-  </head>
+
+  <link rel="icon" href="images/icono-ls.ico" type="image/x-icon">
+</head>
 
 <!-- BODY -->
 <body>
@@ -44,7 +53,8 @@
 
   <!-- Overlay oscuro controlado por CSS -->
 <!-- <div class="hero-overlay"></div> -->
-
+<!-- Overlay oscuro para el carrusel, descomentar si se necesita -->
+<!-- <div class="hero-overlay"></div> -->
 
 <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
   <div class="carousel-inner">
@@ -203,20 +213,21 @@
     </div>
   </div>
 </div>
+</section>
 
 
   
   
 <!-- NOSOTROS -->
-<section id="nosotros" class="section py-5 curvas-fondo-oscuro position-relative">
-  <div class="container">
+<section id="nosotros" class="section py-5 curvas-fondo-oscuro">
+  <div class="container-fluid px-0">
     <h2 class="text-center mb-5">Nosotros</h2>
 
     <!-- Descripción institucional -->
     <div class="row mb-5">
-      <div class="col-lg-10 mx-auto text-center" data-aos="fade-in" data-aos-duration="1000">
+      <div class="col-lg-10 mx-auto text-center">
         <p class="lead">
-          <strong>Latitud Sur</strong> es un estudio profesional con base en La Plata dedicado a brindar servicios de topografía a todo el país y de agrimensura en la provincia de Buenos Aires. Con más de una década de experiencia combinada, nos especializamos en proyectos urbanos, rurales, viales e industriales, ofreciendo soluciones técnicas precisas y acompañamiento profesional en cada etapa del trabajo.
+          <strong>Latitud Sur</strong> es un estudio profesional con base en La Plata dedicado a brindar servicios de topografía a todo el país y de agrimensura en la provincia de Buenos Aires.[...]
         </p>
       </div>
     </div>
@@ -224,68 +235,54 @@
     <!-- Tarjetas del equipo -->
     <div class="row g-4 justify-content-center">
       <!-- Martín Moccia -->
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-md-4">
         <div class="card persona-card text-center h-100">
           <img src="images/moccia.jpg" class="card-img-top rounded-top" alt="Martín Moccia" style="object-position: top;">
           <div class="card-body">
             <h5 class="card-title">Martín Moccia</h5>
             <p class="card-text">
-              Ingeniero Agrimensor con más de 10 años de experiencia en obras civiles, viales e hidráulicas. Ha desarrollado y ejecutado proyectos integrales desde el plano hasta el campo, realizando estados parcelarios, deslindes, amojonamientos, nivelaciones, replanteos de obra, traslados de cota, monitoreos y vuelos con dron, así como producción de planos CAD.
+              Ingeniero Agrimensor con más de 10 años de experiencia en obras civiles, viales e hidráulicas. Ha desarrollado y ejecutado proyectos integrales desde el plano hasta el campo, realizando relevamientos, replanteos y dirección de obra.
             </p>
           </div>
         </div>
       </div>
-
       <!-- Sebastián Saldivar -->
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="col-md-4">
         <div class="card persona-card text-center h-100">
           <img src="images/saldivar.jpg" class="card-img-top rounded-top" alt="Sebastián Saldivar">
           <div class="card-body">
             <h5 class="card-title">Sebastián Saldivar</h5>
             <p class="card-text">
-              Agrimensor con más de una década de trayectoria en campo, especializado en obras públicas y privadas. Participó en numerosos proyectos topográficos y catastrales, incluyendo parcelamientos, nivelaciones, replanteos, obras hidráulicas, seguimiento con dron, y ejecución técnica desde el relevamiento hasta la documentación final.
+              Agrimensor con más de una década de trayectoria en campo, especializado en obras públicas y privadas. Participó en numerosos proyectos topográficos y catastrales, incluyendo parcelamientos y nivelaciones urbanas y rurales.
             </p>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- SVG curva inferior blanca
-  <div class="custom-shape-divider-bottom-1700000000">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-      preserveAspectRatio="none">
-      <path d="M0,0V46.29c47.4,22.6,103.77,35.82,162.14,38.22,86.09,3.61,172-16.54,258-21.52C566.19,55.86,652.86,82.8,738,97.5c98.55,16.88,197.44,9.37,294-17.7V0Z"
-        class="shape-fill"></path>
-    </svg>
-  </div> -->
-</section>
-
-
-      <!-- Nicolás -->
-<!-- <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+      <!-- Nicolás Kass -->
+      <div class="col-md-4">
         <div class="card persona-card text-center h-100">
           <img src="images/kass.jpg" class="card-img-top rounded-top" alt="Nicolás Kass" style="object-position: top center;">
           <div class="card-body">
             <h5 class="card-title">Nicolás Kass</h5>
             <p class="card-text">
-              Licenciado en Biología, docente e investigador con más de 20 años de experiencia en planificación y gestión de proyectos. Aporta una visión estratégica con fuerte base en tecnología, incluyendo sistemas de información geográfica (GIS), modelado, sensores remotos y soluciones digitales aplicadas a la agrimensura. Encargado de la gestión técnica, operativa y administrativa del estudio.
+              Licenciado en Biología, docente e investigador con más de 20 años de experiencia en planificación y gestión de proyectos. Aporta una visión estratégica con fuerte base en tecnología y sustentabilidad.
             </p>
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <!-- Cierre institucional -->
-    <!-- <div class="row mt-5"> -->
-      <!-- <div class="col-lg-10 mx-auto text-center"> -->
-        <!-- <p class="fst-italic text-light"> -->
-          <!-- Un equipo interdisciplinario comprometido con la precisión, la eficiencia y el acompañamiento profesional en cada proyecto. -->
-        <!-- </p> -->
-      <!-- </div> -->
-    <!-- </div> cierre container -->
-  <!-- </div> cierre container-fluid -->
-  
+    <div class="row mt-5">
+      <div class="col-lg-10 mx-auto text-center">
+        <p class="fst-italic text-light">
+          Un equipo interdisciplinario comprometido con la precisión, la eficiencia y el acompañamiento profesional en cada proyecto.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 
@@ -430,15 +427,12 @@
 <!-- GSAP -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
-<!-- Librería AOS -->
+<!-- AOS library -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
 
 <!-- Tu animación hero -->
 <script src="js/hero.js"></script>
-
-<!-- Inicialización de AOS -->
-<script src="js/aos-init.js"></script>
-
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -483,8 +477,6 @@
 
 
 </body>
-
-</body>
 </html>
 
 
@@ -520,7 +512,7 @@
 <!-- FOOTER -->
 <footer class="footer text-white text-center py-3" style="background-color: #1c1c1e;">
   <div class="container">
-    <p>&copy; 2025 Latitud Sur - Agrimensura & Topografía</p>
+    <p>© 2023 Latitud Sur. Todos los derechos reservados.</p>
   </div>
 </footer>
 
