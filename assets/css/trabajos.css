@@ -1,0 +1,63 @@
+/* TRABAJOS */
+
+/* Swiper Container */
+.mySwiper {
+  padding: 20px 0;
+  padding-bottom: 40px;
+}
+
+/* Swiper Slide */
+.swiper-slide {
+  width: 300px;
+}
+
+/* Trabajo Card */
+.trabajo-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  height: 100%;
+}
+
+.trabajo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+}
+
+.trabajo-card .card-body {
+  padding: 15px;
+}
+
+.trabajo-card .card-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.trabajo-card .card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.trabajo-card img {
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Swiper Flechas */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #0d6efd;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #0d6efd;
+  color: white;
+}

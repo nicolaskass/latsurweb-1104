@@ -1,0 +1,40 @@
+/* CONTACTO */
+
+/* Formulario contacto */
+#contacto-section form .form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contacto-section form .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+#contacto-section form .btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+#contacto-section form .btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+/* Información de contacto */
+#contacto-section .bg-white {
+  background-color: #fff;
+  color: #111;
+}
+
+#contacto-section .bg-white a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+#contacto-section .bg-white a:hover {
+  text-decoration: underline;
+}
