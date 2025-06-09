@@ -1,10 +1,13 @@
-document.addEventListener("DOMContentLoaded", () => {
-    AOS.init({
-      duration: 1000,       // Duración de la animación (ms)
-      easing: 'ease-out',   // Suavidad
-      once: true            // Solo una vez por scroll
-    });
+
+// aos-init.js
+document.addEventListener("DOMContentLoaded", function() {
+  AOS.init({
+    once: true,
+    duration: 1000,
+    easing: 'ease-in-out',
+    offset: 120
   });
+});
 
   function toggleDescripcion(button) {
     const clickedCard = button.closest('.servicio-card-expandible');
