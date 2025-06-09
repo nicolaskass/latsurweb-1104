@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-<!-- HEAD -->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -8,632 +7,112 @@
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  
+
   <!-- Font Awesome y Google Fonts -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
 
-  <!-- AOS primero -->
+  <!-- AOS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-  <!-- Tu estilo principal después -->
-  <link rel="stylesheet" href="style.css"/>
 
   <!-- Swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
-  <link rel="icon" href="images/icono-ls.ico" type="image/x-icon">
+  <!-- CSS Global -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- CSS por sección -->
+  <link rel="stylesheet" href="assets/css/hero.css">
+  <link rel="stylesheet" href="assets/css/servicios.css">
+  <link rel="stylesheet" href="assets/css/nosotros.css">
+  <link rel="stylesheet" href="assets/css/trabajos.css">
+  <link rel="stylesheet" href="assets/css/contacto.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/icono-ls.ico" type="image/x-icon">
 </head>
 
-<!-- BODY -->
 <body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark latitud-navbar">
+    <div class="container align-items-center">
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/logo.png" alt="Latitud Sur" class="logo-navbar">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#trabajos">Trabajos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div id="hero"></div>
+
+  <!-- SERVICIOS -->
+  <div id="servicios"></div>
+
+  <!-- NOSOTROS -->
+  <div id="nosotros"></div>
+
+  <!-- TRABAJOS -->
+  <div id="trabajos"></div>
+
+  <!-- CONTACTO -->
+  <div id="contacto"></div>
+
+  <!-- FOOTER -->
+  <footer class="footer text-white py-4" style="background-color: #1c1c1e;">
+    <div class="container text-center">
+      <div class="mb-3">
+        <a href="mailto:latitudsur.eia@gmail.com" class="text-white me-3"><i class="fa fa-envelope me-1"></i>latitudsur.eia@gmail.com</a>
+        <a href="https://wa.me/5492215573180" target="_blank" class="text-success me-3"><i class="fab fa-whatsapp me-1"></i>WhatsApp</a>
+        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+      </div>
+      <small>© <span id="year"></span> Latitud Sur. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+  <!-- JS GLOBAL -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <!-- Carga dinámica de secciones -->
+  <script src="assets/js/loadSections.js"></script>
+
+  <!-- Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="assets/js/swiper-init.js"></script>
+
+  <!-- AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/aos-init.js"></script>
+
+  <!-- Hero -->
+  <script src="assets/js/hero.js"></script>
+
+  <!-- Servicios toggle -->
+  <script src="assets/js/toggleServicios.js"></script>
+
+  <!-- Año Footer -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 <!-- sticky bar presupuesto -->
-  <div class="sticky-bar w-100 position-fixed bottom-0 start-0 bg-primary text-white text-center py-2 shadow-lg" style="z-index: 1050;">
-    <a href="#contacto" class="text-white fw-bold text-decoration-none">
-      ¿Necesitás un presupuesto? Contactanos ahora →
-    </a>
-  </div>
-  
-  <!-- NAV -->
-<nav class="navbar navbar-expand-lg navbar-dark latitud-navbar">
-  <div class="container align-items-center">
-    <a class="navbar-brand" href="#">
-      <img src="images/logo.png" alt="Latitud Sur" class="logo-navbar">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-        <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
-        <li class="nav-item"><a class="nav-link" href="#trabajos">Trabajos</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-<!-- HERO CAROUSEL -->
-<header class="hero position-relative">
-
-  <!-- Overlay oscuro controlado por CSS -->
-<!-- <div class="hero-overlay"></div> -->
-<!-- Overlay oscuro para el carrusel, descomentar si se necesita -->
-<!-- <div class="hero-overlay"></div> -->
-
-<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2500">
-  <div class="carousel-inner">
-    
-    <div class="carousel-item active">
-      <img src="images/nivel-nikon.png" class="hero-img" alt="Nivel Nikon">
-    </div>
-
-    <div class="carousel-item">
-      <img src="images/dron-loteo.png" class="hero-img" alt="Dron sobre loteo">
-    </div>
-
-    <div class="carousel-item">
-      <img src="images/saneamiento1.jpg" class="hero-img" alt="Saneamiento topográfico">
-    </div>
-
-    <div class="carousel-item">
-      <img src="images/estacionobra.png" class="hero-img" alt="Estación total">
-    </div>
-
-    <div class="carousel-item">
-      <img src="images/cad.png" class="hero-img" alt="AutoCAD en uso">
-    </div>
-
-  </div>
+<div class="sticky-bar w-100 position-fixed bottom-0 start-0 bg-primary text-white text-center py-2 shadow-lg" style="z-index: 1050;">
+  <a href="#contacto" class="text-white fw-bold text-decoration-none">
+    ¿Necesitás un presupuesto? Contactanos ahora →
+  </a>
 </div>
-
-  <!-- Texto encima del carrusel -->
-  <div class="container position-absolute top-50 start-50 translate-middle text-white text-center" style="z-index: 3;">
-    <h1 class="display-4 fw-bold hero-title mb-3">Precisión que transforma tu proyecto.</h1>
-    <p class="hero-subtitle lead">Topografía en todo el país. Agrimensura en Buenos Aires. Soluciones confiables, a tu medida.</p>
-    <a href="#contacto" class="btn btn-primary btn-lg mt-3 shadow">Contactanos</a>
-  </div>
-  
-</header>
-
-
-
-      <section id="servicios" class="section py-5 curvas-fondo-claro">
-        <div class="container">
-          <h2 class="text-center mb-5 text-white">Servicios</h2>
-          <div class="row g-4">
-      
-            <!-- Estado Parcelario -->
-            <!-- <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100"> -->
-                          <div class="col-md-6 col-lg-4">
-              <div class="servicio-card-expandible" data-servicio="Estado Parcelario">
-                <div class="card-top text-center">
-                  <i class="fa-solid fa-file-signature text-primary mb-2 fs-1"></i>
-                  <h5 class="fs-5 mb-0 toggle-servicio">Estado Parcelario</h5>
-                  <button class="toggle-chevron mt-2">
-                    <i class="fa-solid fa-chevron-down"></i>
-                  </button>
-                </div>
-                <div class="servicio-descripcion text-center">
-                  <p class="mt-3 mb-3">Verificación legal y física de inmuebles. Obligatorio para escrituración y registro catastral en la Provincia de Buenos Aires.</p>
-                  <a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Deslinde y Amojonamiento -->
-            <!-- <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200"> -->
-              <div class="col-md-6 col-lg-4">
-              <div class="servicio-card-expandible" data-servicio="Deslinde y Amojonamiento">
-                <div class="card-top text-center">
-                  <i class="fa-solid fa-map-location-dot text-primary mb-2 fs-1"></i>
-                  <h5 class="fs-5 mb-0 toggle-servicio">Deslinde y Amojonamiento</h5>
-                  <button class="toggle-chevron mt-2">
-                    <i class="fa-solid fa-chevron-down"></i>
-                  </button>
-                </div>
-                <div class="servicio-descripcion text-center">
-                  <p class="mt-3 mb-3">Determinación de límites con mojones. Evita conflictos con vecinos y asegura la correcta delimitación de la propiedad.</p>
-                  <a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Subdivisiones y PH -->
-            <!-- <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300"> -->
-                          <div class="col-md-6 col-lg-4">
-              <div class="servicio-card-expandible" data-servicio="Subdivisiones">
-                <div class="card-top text-center">
-                  <i class="fa-solid fa-diagram-project text-primary mb-2 fs-1"></i>
-                  <h5 class="fs-5 mb-0 toggle-servicio">Subdivisiones y Planos de PH</h5>
-                  <button class="toggle-chevron mt-2">
-                    <i class="fa-solid fa-chevron-down"></i>
-                  </button>
-                </div>
-                <div class="servicio-descripcion text-center">
-                  <p class="mt-3 mb-3">Fraccionamiento de parcelas para herencias, desarrollos inmobiliarios o ventas. Cumplimiento técnico y legal garantizado.</p>
-                  <a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Artículo 6° -->
-            <!-- <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400"> -->
-            <div class="col-md-6 col-lg-4">
-              <div class="servicio-card-expandible" data-servicio="Artículo 6° / Decreto 947">
-                <div class="card-top text-center">
-                  <i class="fa-solid fa-scale-balanced text-primary mb-2 fs-1"></i>
-                  <h5 class="fs-5 mb-0 toggle-servicio">Artículo 6° / Decreto 947</h5>
-                  <button class="toggle-chevron mt-2">
-                    <i class="fa-solid fa-chevron-down"></i>
-                  </button>
-                </div>
-                <div class="servicio-descripcion text-center">
-                  <p class="mt-3 mb-3">Tramitación previa a construcciones o subdivisiones según Ley Provincial. Cumplimiento legal para presentación municipal.</p>
-                  <a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Relevamientos Topográficos -->
-            <!-- <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500"> -->
-            <div class="col-md-6 col-lg-4">
-              <div class="servicio-card-expandible" data-servicio="Relevamientos Topográficos">
-                <div class="card-top text-center">
-                  <i class="fa-solid fa-ruler-combined text-primary mb-2 fs-1"></i>
-                  <h5 class="fs-5 mb-0 toggle-servicio">Relevamientos Topográficos</h5>
-                  <button class="toggle-chevron mt-2">
-                    <i class="fa-solid fa-chevron-down"></i>
-                  </button>
-                </div>
-                <div class="servicio-descripcion text-center">
-                  <p class="mt-3 mb-3">Obtención de datos altimétricos y planimétricos con GNSS y estación total. Esenciales para obras civiles, loteos y catastros.</p>
-                  <a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Replanteos de Obra -->
-            <!-- <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600"> -->
-            <div class="col-md-6 col-lg-4">
-              <div class="servicio-card-expandible" data-servicio="Replanteos de Obra">
-                <div class="card-top text-center">
-                  <i class="fa-solid fa-drafting-compass text-primary mb-2 fs-1"></i>
-                  <h5 class="fs-5 mb-0 toggle-servicio">Replanteos de Obra</h5>
-                  <button class="toggle-chevron mt-2">
-                    <i class="fa-solid fa-chevron-down"></i>
-                  </button>
-                </div>
-                <div class="servicio-descripcion text-center">
-                  <p class="mt-3 mb-3">Marcado de ejes, cotas y niveles en el terreno a partir del plano. Precisión para construcción segura y eficiente.</p>
-                  <a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Nivelaciones -->
-            <!-- <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="700"> -->
-                          <div class="col-md-6 col-lg-4">
-              <div class="servicio-card-expandible" data-servicio="Nivelaciones">
-                <div class="card-top text-center">
-                  <i class="fa-solid fa-wave-square text-primary mb-2 fs-1"></i>
-                  <h5 class="fs-5 mb-0 toggle-servicio">Nivelaciones</h5>
-                  <button class="toggle-chevron mt-2">
-                    <i class="fa-solid fa-chevron-down"></i>
-                  </button>
-                </div>
-                <div class="servicio-descripcion text-center">
-                  <p class="mt-3 mb-3">Medición de cotas y pendientes. Ideal para escurrimientos, caminos rurales, obras hidráulicas y planificación urbana.</p>
-                  <a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Seguimiento de Obras -->
-            <!-- <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="800"> -->
-            <div class="col-md-6 col-lg-4">
-               <div class="servicio-card-expandible" data-servicio="Seguimiento de Obras">
-                 <div class="card-top text-center">
-                  <i class="fa-solid fa-video text-primary mb-2 fs-1"></i>
-                  <h5 class="fs-5 mb-0 toggle-servicio">Seguimiento de Obras</h5>
-                  <button class="toggle-chevron mt-2">
-                    <i class="fa-solid fa-chevron-down"></i>
-                  </button>
-                </div>
-                <div class="servicio-descripcion text-center">
-                  <p class="mt-3 mb-3">Documentamos tu obra con fotos y videos para obtener un monitoreo visual a lo largo del proyecto.</p>
-                  <a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Ortomosaicos e imágenes aéreas -->
-            <!-- <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="900"> -->
-              <div class="col-md-6 col-lg-4">
-              <div class="servicio-card-expandible" data-servicio="Ortomosaicos e Imágenes Aéreas">
-                <div class="card-top text-center">
-                  <i class="fa-solid fa-image text-primary mb-2 fs-1"></i>
-                  <h5 class="fs-5 mb-0 toggle-servicio">Ortomosaicos e Imágenes Aéreas</h5>
-                  <button class="toggle-chevron mt-2">
-                    <i class="fa-solid fa-chevron-down"></i>
-                  </button>
-                </div>
-                <div class="servicio-descripcion text-center">
-                  <p class="mt-3 mb-3">Generamos ortomosaicos y relevamientos visuales mediante vuelos programados con drones profesionales.</p>
-                  <a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)"><i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp</a>
-                </div>
-              </div>
-            </div>
-      
-          </div>
-        </div>
-      </section>
-      
-
-  
-  
-<!-- NOSOTROS -->
-<section id="nosotros" class="section py-5 curvas-fondo-oscuro">
-  <div class="container-fluid px-0">
-    <h2 class="text-center mb-5">Nosotros</h2>
-
-    <!-- Introducción -->
-    <div class="row mb-5">
-      <div class="col-lg-10 mx-auto text-center">
-        <p class="lead">
-          <strong>Latitud Sur</strong> es un estudio profesional con sede en La Plata, especializado en topografía y agrimensura. Actualmente conformado por dos profesionales con más de una década de experiencia, brindamos soluciones precisas, eficientes y adaptadas a las necesidades de obras civiles, viales, hidráulicas y urbanas.
-        </p>
-      </div>
-    </div>
-
-    <!-- Tarjetas -->
-    <div class="row g-4 justify-content-center">
-      <!-- Martín Moccia -->
-      <div class="col-md-4">
-        <div class="card persona-card text-center h-100">
-          <img src="images/moccia.jpg" class="card-img-top rounded-top" alt="Martín Moccia" style="object-position: top;">
-          <div class="card-body">
-            <h5 class="card-title">Martín Moccia</h5>
-            <p class="card-text">
-              Ingeniero Agrimensor con más de 10 años de experiencia en obras civiles, viales e hidráulicas. Especialista en relevamientos, replanteos y dirección de obra. Con enfoque práctico y resolutivo, lidera proyectos integrales desde su concepción técnica hasta la ejecución en campo.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sebastián Saldivar -->
-      <div class="col-md-4">
-        <div class="card persona-card text-center h-100">
-          <img src="images/saldivar.jpg" class="card-img-top rounded-top" alt="Sebastián Saldivar">
-          <div class="card-body">
-            <h5 class="card-title">Sebastián Saldivar</h5>
-            <p class="card-text">
-              Agrimensor con trayectoria sólida en obras públicas y privadas. Ha intervenido en proyectos de parcelamiento, nivelación y gestión catastral en entornos urbanos y rurales. Su experiencia de campo garantiza precisión y confiabilidad en cada medición.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Futuro integrante (oculto) -->
-    <!--
-    <div class="col-md-4">
-      <div class="card persona-card text-center h-100">
-        <img src="images/kass.jpg" class="card-img-top rounded-top" alt="Nicolás Kass" style="object-position: top center;">
-        <div class="card-body">
-          <h5 class="card-title">Nicolás Kass</h5>
-          <p class="card-text">
-            Licenciado en Biología, docente e investigador con más de 20 años de experiencia en planificación y gestión de proyectos. Aporta una visión estratégica con fuerte base en tecnología y sustentabilidad.
-          </p>
-        </div>
-      </div>
-    </div>
-    -->
-
-    <!-- Cierre -->
-    <div class="row mt-5">
-      <div class="col-lg-10 mx-auto text-center">
-        <p class="fst-italic text-light">
-          Un estudio joven, ágil y comprometido con la calidad técnica y el acompañamiento profesional en cada etapa del proyecto.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-<!-- TRABAJOS REALIZADOS -->
-<!-- <section id="trabajos" class="section py-5 curvas-fondo-claro">
-  <div class="container">
-    <h2 class="text-center mb-5">Nuestros Trabajos</h2>
-
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper"> -->
-
-        <!-- Slide 1 -->
-        <!-- <div class="swiper-slide">
-          <div class="card trabajo-card">
-            <img src="images/ruta2.jpg" class="card-img-top" alt="Ruta 2">
-            <div class="card-body">
-              <h5 class="card-title">Ensanche de Ruta 2</h5>
-              <p class="card-text">Relevamiento y replanteo de traza para ampliación de autopista provincial.</p>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- Slide 2 -->
-        <!-- <div class="swiper-slide">
-          <div class="card trabajo-card">
-            <img src="images/saneamiento.jpg" class="card-img-top" alt="Saneamiento">
-            <div class="card-body">
-              <h5 class="card-title">Obras de Saneamiento</h5>
-              <p class="card-text">Nivelaciones para redes cloacales, pluviales y estaciones de bombeo.</p>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- Slide 3 -->
-        <!-- <div class="swiper-slide">
-          <div class="card trabajo-card">
-            <img src="images/urbanizacion.jpg" class="card-img-top" alt="Urbanización">
-            <div class="card-body">
-              <h5 class="card-title">Urbanización en La Plata</h5>
-              <p class="card-text">Subdivisiones y gestiones catastrales para desarrollos inmobiliarios.</p>
-            </div>
-          </div>
-        </div>
- -->
-        <!-- Slide 4 -->
-        <!-- <div class="swiper-slide">
-          <div class="card trabajo-card">
-            <img src="images/hidraulica.jpg" class="card-img-top" alt="Obra hidráulica">
-            <div class="card-body">
-              <h5 class="card-title">Obras Hidráulicas</h5>
-              <p class="card-text">Nivelaciones para planificación de escurrimientos y drenajes.</p>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- Slide 5 -->
-        <!-- <div class="swiper-slide">
-          <div class="card trabajo-card">
-            <img src="images/replanteo.jpg" class="card-img-top" alt="Replanteo">
-            <div class="card-body">
-              <h5 class="card-title">Replanteos en Obra</h5>
-              <p class="card-text">Marcado de ejes y cotas para obras civiles y viales.</p>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- Slide 6 -->
-        <!-- <div class="swiper-slide">
-          <div class="card trabajo-card">
-            <img src="images/camino.jpg" class="card-img-top" alt="Camino rural">
-            <div class="card-body">
-              <h5 class="card-title">Mejoras de Caminos</h5>
-              <p class="card-text">Topografía para mantenimiento y estabilización de caminos rurales.</p>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- Slide 7 -->
-        <!-- <div class="swiper-slide">
-          <div class="card trabajo-card">
-            <img src="images/industrial.jpg" class="card-img-top" alt="Parque industrial">
-            <div class="card-body">
-              <h5 class="card-title">Parques Industriales</h5>
-              <p class="card-text">Subdivisiones y proyectos técnicos para zonas industriales.</p>
-            </div>
-          </div>
-        </div> -->
-
-      </div>
-
-      <!-- Flechas -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
-  </div>
-  <div class="swiper-pagination mt-4"></div>
-</section>
-
-<!-- CONTACTO COMBINADO -->
-<section id="contacto" class="section py-5 curvas-fondo-oscuro">
-  <div class="container">
-    <h2 class="text-center mb-5">Contacto</h2>
-    <div class="row justify-content-center align-items-start g-4">
-
-      <!-- Información -->
-      <div class="col-md-5">
-        <div class="bg-white p-4 rounded shadow-sm h-100 text-dark">
-          <h5 class="mb-4">¿Dónde encontrarnos?</h5>
-          <p><i class="fa-solid fa-phone text-primary me-2"></i> (0221) 557-3180</p>
-          <p><i class="fa-solid fa-envelope text-primary me-2"></i> latitudsur.eia@gmail.com</p>
-          <p><i class="fa-solid fa-map-marker-alt text-primary me-2"></i> La Plata, Buenos Aires</p>
-          <hr>
-          <p><i class="fab fa-whatsapp text-success me-2"></i> <a href="https://wa.me/5492215573180" target="_blank">Escribinos por WhatsApp</a></p>
-        </div>
-      </div>
-
-      <!-- Formulario -->
-      <div class="col-md-7">
-        <div class="bg-white p-4 rounded shadow-sm h-100">
-          <h5 class="mb-4">¿Necesitás un presupuesto o tenés dudas? Escribinos:</h5>
-          <form>
-            <div class="mb-3">
-              <label class="form-label">Nombre</label>
-              <input type="text" class="form-control" placeholder="Tu nombre" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Correo electrónico</label>
-              <input type="email" class="form-control" placeholder="nombre@ejemplo.com" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Mensaje</label>
-              <textarea class="form-control" rows="4" placeholder="Contanos qué necesitás..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Enviar mensaje</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-</section>
-
-<!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
-<!-- AOS library -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
-
-<!-- Tu animación hero -->
-<script src="js/hero.js"></script>
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-<!-- Swiper -->
-<script>
-  const isMobile = window.innerWidth < 768;
-
-  const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    speed: 700,  // ⬅ transición más suave
-    autoplay: !isMobile
-      ? {
-          delay: 5000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true
-        }
-      : false,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2
-      },
-      992: {
-        slidesPerView: 3
-      }
-    }
-  });
-</script>
-
-
-
-
-<script>
-  function toggleDescripcion(element) {
-    const tarjetaActual = element.closest('.servicio-card-expandible');
-    const todasLasTarjetas = document.querySelectorAll('.servicio-card-expandible');
-
-    // Cerrar todas las demás
-    todasLasTarjetas.forEach(t => {
-      if (t !== tarjetaActual) {
-        t.classList.remove('expandida');
-        t.querySelector('.toggle-chevron')?.classList.remove('rotate');
-      }
-    });
-
-    // Alternar la actual
-    tarjetaActual.classList.toggle('expandida');
-    tarjetaActual.querySelector('.toggle-chevron')?.classList.toggle('rotate');
-
-    if (tarjetaActual.classList.contains('expandida')) {
-      setTimeout(() => {
-        tarjetaActual.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 300);
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    // Agregar clic a flechas, títulos y tarjetas completas
-    document.querySelectorAll('.servicio-card-expandible').forEach(tarjeta => {
-      tarjeta.addEventListener('click', e => {
-        // Evitar doble activación si se hace clic en un botón o enlace
-        if (e.target.closest('a, button')) return;
-        toggleDescripcion(tarjeta);
-      });
-    });
-
-    // Cerrar si se hace clic fuera de las tarjetas
-    document.addEventListener('click', e => {
-      if (!e.target.closest('.servicio-card-expandible')) {
-        document.querySelectorAll('.servicio-card-expandible.expandida').forEach(t => {
-          t.classList.remove('expandida');
-          t.querySelector('.toggle-chevron')?.classList.remove('rotate');
-        });
-      }
-    });
-  });
-</script>
-
-
-
-
 </body>
 </html>
-
-
-<!-- BOTON WHATSAPP FLOTANTE -->
-  <style>
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      padding: 15px;
-      font-size: 24px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-      z-index: 100;
-    }
-    .whatsapp-float i {
-      margin-top: 15px;
-    }
-  </style>
-
-<!-- BOTON WHATSAPP FLOTANTE
-<a href="#" class="whatsapp-float-link" onclick="enviarWhatsappDesde(this)" aria-label="Enviar WhatsApp">
-  <i class="fab fa-whatsapp"></i>
-</a> -->
-
-
-
-
-
-
-
-<footer class="footer text-white py-4" style="background-color: #1c1c1e;">
-  <div class="container text-center">
-    <div class="mb-3">
-      <a href="mailto:latitudsur.eia@gmail.com" class="text-white me-3"><i class="fa fa-envelope me-1"></i>latitudsur.eia@gmail.com</a>
-      <a href="https://wa.me/5492215573180" target="_blank" class="text-success me-3"><i class="fab fa-whatsapp me-1"></i>WhatsApp</a>
-      <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-    </div>
-    <small>© <span id="year"></span> Latitud Sur. Todos los derechos reservados.</small>
-  </div>
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
