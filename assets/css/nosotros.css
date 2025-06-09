@@ -1,0 +1,33 @@
+/* NOSOTROS */
+
+/* Persona Card */
+.persona-card {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.persona-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.persona-card img {
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.persona-card .card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.persona-card .card-text {
+  font-size: 1rem;
+  color: #ccc;
+}
