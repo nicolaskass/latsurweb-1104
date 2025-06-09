@@ -222,15 +222,6 @@ body {
 }
 
 /* FONDOS CON CURVAS - CLARO */
-.curvas-fondo-claro {
-  background-image: url('images/curvas-fondo.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  position: relative;
-  z-index: 1;
-}
 
 .curvas-fondo-claro::before {
   content: "";
@@ -689,4 +680,47 @@ body {
 
 .custom-shape-divider-bottom-1700000000 path {
   fill: #f8f9fa; /* Color claro de la siguiente sección */
+}
+
+/* --- CURVAS FONDO ACTUALIZADO --- */
+
+.curvas-fondo-claro {
+  background-image: url('images/curvas-fondo-martin.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+}
+
+.curvas-fondo-claro::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(255, 255, 255, 0.75);
+  z-index: -1;
+}
+
+
+.curvas-fondo-oscuro {
+  background-image: url('images/curvas-fondo-martin.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #000;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.curvas-fondo-oscuro::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Más oscuro para mejor contraste */
+  z-index: -1;
 }
