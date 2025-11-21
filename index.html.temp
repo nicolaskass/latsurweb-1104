@@ -59,15 +59,9 @@
   <div id="hero">
     <!-- HERO -->
 <header class="relative h-screen w-full overflow-hidden">
-  <!-- Background Image Slideshow -->
-  <div class="hero-slideshow absolute inset-0">
-    <div class="hero-slide active" style="background-image: url('assets/images/nivel-nikon.png');"></div>
-    <div class="hero-slide" style="background-image: url('assets/images/dron-loteo.png');"></div>
-    <div class="hero-slide" style="background-image: url('assets/images/saneamiento.jpg');"></div>
-    <div class="hero-slide" style="background-image: url('assets/images/estacionobra.png');"></div>
-    <div class="hero-slide" style="background-image: url('assets/images/cad.png');"></div>
-  </div>
-
+  <!-- Background Image with Ken Burns Effect -->
+  <div class="absolute inset-0 bg-cover bg-center animate-ken-burns" style="background-image: url('assets/images/hero-1-satelital.png');"></div>
+  
   <!-- Overlay -->
   <div class="absolute inset-0 bg-black/60"></div>
 
@@ -80,29 +74,17 @@
 </header>
 
 <style>
-  .hero-slideshow {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  @keyframes ken-burns {
+    0% {
+      transform: scale(1) translate(0, 0);
+    }
+    100% {
+      transform: scale(1.1) translate(-2%, 2%);
+    }
   }
-
-  .hero-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+  .animate-ken-burns {
+    animation: ken-burns 20s infinite alternate ease-in-out;
   }
-
-  .hero-slide.active {
-    opacity: 1;
-  }
-
   .text-shadow-lg {
     text-shadow: 0 2px 10px rgba(0,0,0,0.7);
   }
@@ -115,9 +97,9 @@
   <!-- SERVICIOS -->
   <div id="servicios">
     <!-- SERVICIOS -->
-<section id="servicios" class="py-20 curvas-fondo-claro">
+<section id="servicios" class="py-20 bg-gray-100">
   <div class="container mx-auto px-4">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Nuestros Servicios</h2>
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Nuestros Servicios</h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
       <!-- Estado Parcelario -->
@@ -209,7 +191,7 @@
           <a href="https://wa.me/5492215573180" target="_blank" class="inline-block mt-4 px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors">Consultar por WhatsApp</a>
         </div>
       </div>
-
+      
     </div>
   </div>
 </section>
@@ -228,7 +210,7 @@
   <!-- NOSOTROS -->
   <div id="nosotros">
     <!-- NOSOTROS -->
-<section id="nosotros" class="py-20 curvas-fondo-oscuro text-white">
+<section id="nosotros" class="py-20 bg-gray-900 text-white">
   <div class="container mx-auto px-4">
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Nosotros</h2>
     <p class="text-lg text-center max-w-3xl mx-auto mb-12 text-gray-300">
@@ -272,9 +254,9 @@
   <!-- TRABAJOS -->
   <div id="trabajos">
     <!-- TRABAJOS REALIZADOS -->
-<section id="trabajos" class="py-20 curvas-fondo-claro">
+<section id="trabajos" class="py-20 bg-gray-100">
   <div class="container mx-auto px-4">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Nuestros Trabajos</h2>
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Nuestros Trabajos</h2>
 
     <div class="swiper mySwiper">
       <div class="swiper-wrapper py-4">
