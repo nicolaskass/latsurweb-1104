@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Mejoras generales de diseño */
+body {
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+}
+
+/* Animaciones suaves */
+* {
+  scroll-behavior: smooth;
+}
+
 /* CURVAS FONDO CLARO */
 .curvas-fondo-claro {
   background-image: url('../images/curvas-fondo-martin.png');
@@ -10,7 +26,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
-  z-index: 1;
+  overflow: visible;
 }
 
 .curvas-fondo-claro::before {
@@ -20,8 +36,22 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.85);
-  z-index: -1;
+  background-color: rgba(17, 24, 39, 0.92); /* gris muy oscuro casi negro */
+  z-index: 0;
+  pointer-events: none;
+}
+
+.curvas-fondo-claro > * {
+  position: relative;
+  z-index: 1;
+}
+
+.curvas-fondo-claro h2,
+.curvas-fondo-claro h3,
+.curvas-fondo-claro h4,
+.curvas-fondo-claro h5,
+.curvas-fondo-claro p {
+  color: #fff !important;
 }
 
 /* CURVAS FONDO OSCURO */
@@ -32,9 +62,8 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: #000;
-  color: #fff;
   position: relative;
-  z-index: 1;
+  overflow: visible;
 }
 
 .curvas-fondo-oscuro::before {
@@ -44,6 +73,61 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.curvas-fondo-oscuro > * {
+  position: relative;
+  z-index: 1;
+}
+
+.curvas-fondo-oscuro h2,
+.curvas-fondo-oscuro h3,
+.curvas-fondo-oscuro h4,
+.curvas-fondo-oscuro h5,
+.curvas-fondo-oscuro p,
+.curvas-fondo-oscuro li {
+  color: #fff !important;
+}
+
+/* Estilos para tarjetas de servicios */
+.servicio-card-expandible {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 240, 240, 0.92)) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.servicio-card-expandible h5 {
+  color: #1f2937 !important;
+  font-weight: 700;
+}
+
+.servicio-card-expandible p {
+  color: #4b5563 !important;
+}
+
+.servicio-card-expandible .text-blue-600 {
+  color: #2563eb !important;
+}
+
+.servicio-card-expandible:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(248, 248, 248, 0.98)) !important;
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+}
+
+/* Tarjetas de trabajo */
+.curvas-fondo-claro .bg-white {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 240, 240, 0.92)) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.curvas-fondo-claro .text-gray-600 {
+  color: #4b5563 !important;
+}
+
+.curvas-fondo-claro .font-bold {
+  color: #1f2937 !important;
 }
