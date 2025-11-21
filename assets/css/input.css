@@ -228,6 +228,21 @@ h1, h2, h3, h4, h5, h6 {
   color: #1f2937 !important;
 }
 
+/* Estilos para selector de servicios en contacto */
+#service-selector {
+  background-color: #000000 !important; /* negro puro */
+  color: #ffffff !important;
+}
+
+#service-selector option {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+#service-selector option:first-child {
+  color: #9ca3af !important; /* gray-400 */
+}
+
 /* Cambiar azules por blancos en todo el sitio */
 .bg-blue-600 {
   background-color: #ffffff !important;
