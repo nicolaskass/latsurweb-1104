@@ -1,41 +1,51 @@
 <!-- CONTACTO -->
-<section id="contacto-section" class="section py-5 curvas-fondo-oscuro">
-  <div class="container">
-    <h2 class="text-center mb-5">Contacto</h2>
-    <div class="row justify-content-center align-items-start g-4">
+<section id="contacto" class="py-20 bg-gray-900 text-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Contacto</h2>
+    <div class="grid md:grid-cols-2 gap-12">
 
-      <!-- Información -->
-      <div class="col-md-5">
-        <div class="bg-white p-4 rounded shadow-sm h-100 text-dark">
-          <h5 class="mb-4">¿Dónde encontrarnos?</h5>
-          <p><i class="fa-solid fa-phone text-primary me-2"></i> (0221) 557-3180</p>
-          <p><i class="fa-solid fa-envelope text-primary me-2"></i> latitudsur.eia@gmail.com</p>
-          <p><i class="fa-solid fa-map-marker-alt text-primary me-2"></i> La Plata, Buenos Aires</p>
-          <hr>
-          <p><i class="fab fa-whatsapp text-success me-2"></i> <a href="https://wa.me/5492215573180" target="_blank">Escribinos por WhatsApp</a></p>
-        </div>
+      <!-- Information -->
+      <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+        <h5 class="text-2xl font-bold mb-6">¿Dónde encontrarnos?</h5>
+        <ul class="space-y-4">
+          <li class="flex items-center">
+            <i class="fa-solid fa-phone text-blue-400 w-6"></i>
+            <span>(0221) 557-3180</span>
+          </li>
+          <li class="flex items-center">
+            <i class="fa-solid fa-envelope text-blue-400 w-6"></i>
+            <span>latitudsur.eia@gmail.com</span>
+          </li>
+          <li class="flex items-center">
+            <i class="fa-solid fa-map-marker-alt text-blue-400 w-6"></i>
+            <span>La Plata, Buenos Aires</span>
+          </li>
+        </ul>
+        <hr class="my-6 border-gray-700">
+        <a href="https://wa.me/5492215573180" target="_blank" class="inline-flex items-center text-green-400 hover:text-green-300 transition-colors">
+          <i class="fab fa-whatsapp w-6"></i>
+          <span>Escribinos por WhatsApp</span>
+        </a>
       </div>
 
-      <!-- Formulario -->
-      <div class="col-md-7">
-        <div class="bg-white p-4 rounded shadow-sm h-100">
-          <h5 class="mb-4">¿Necesitás un presupuesto o tenés dudas? Escribinos:</h5>
-          <form>
-            <div class="mb-3">
-              <label class="form-label">Nombre</label>
-              <input type="text" class="form-control" placeholder="Tu nombre" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Correo electrónico</label>
-              <input type="email" class="form-control" placeholder="nombre@ejemplo.com" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Mensaje</label>
-              <textarea class="form-control" rows="4" placeholder="Contanos qué necesitás..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Enviar mensaje</button>
-          </form>
-        </div>
+      <!-- Form -->
+      <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+        <h5 class="text-2xl font-bold mb-6">¿Necesitás un presupuesto?</h5>
+        <form>
+          <div class="mb-4">
+            <label for="name" class="block mb-2">Nombre</label>
+            <input type="text" id="name" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Tu nombre" required>
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block mb-2">Correo electrónico</label>
+            <input type="email" id="email" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="nombre@ejemplo.com" required>
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block mb-2">Mensaje</label>
+            <textarea id="message" rows="4" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Contanos qué necesitás..." required></textarea>
+          </div>
+          <button type="submit" class="w-full py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-bold transition-colors">Enviar mensaje</button>
+        </form>
       </div>
 
     </div>

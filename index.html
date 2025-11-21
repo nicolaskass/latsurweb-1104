@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Latitud Sur - Agrimensura y Topografía</title>
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-
   <!-- Font Awesome y Google Fonts -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
 
   <!-- AOS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -18,38 +15,42 @@
   <!-- Swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
-  <!-- CSS Global -->
+  <!-- Tailwind CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
-
-  <!-- CSS por sección -->
-  <link rel="stylesheet" href="assets/css/hero.css">
-  <link rel="stylesheet" href="assets/css/servicios.css">
-  <link rel="stylesheet" href="assets/css/nosotros.css">
-  <link rel="stylesheet" href="assets/css/trabajos.css">
-  <link rel="stylesheet" href="assets/css/contacto.css">
 
   <!-- Favicon -->
   <link rel="icon" href="assets/images/icono-ls.ico" type="image/x-icon">
 </head>
 
-<body>
+<body class="bg-black font-sans text-gray-800">
 
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark latitud-navbar">
-    <div class="container align-items-center">
-      <a class="navbar-brand" href="#">
-        <img src="assets/images/logo.png" alt="Latitud Sur" class="logo-navbar">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link" href="#trabajos">Trabajos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-        </ul>
+  <nav class="bg-gray-900/80 backdrop-blur-md text-white fixed top-0 left-0 right-0 z-50 shadow-lg">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center py-3">
+        <a href="#">
+          <img src="assets/images/logo.png" alt="Latitud Sur" class="h-12 md:h-16 transition-all duration-300">
+        </a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a class="hover:text-blue-400 transition-colors duration-300" href="#servicios">Servicios</a>
+          <a class="hover:text-blue-400 transition-colors duration-300" href="#nosotros">Nosotros</a>
+          <a class="hover:text-blue-400 transition-colors duration-300" href="#trabajos">Trabajos</a>
+          <a class="hover:text-blue-400 transition-colors duration-300" href="#contacto">Contacto</a>
+        </div>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-white focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a class="block hover:text-blue-400 transition-colors duration-300 px-3 py-2 rounded-md text-base font-medium" href="#servicios">Servicios</a>
+        <a class="block hover:text-blue-400 transition-colors duration-300 px-3 py-2 rounded-md text-base font-medium" href="#nosotros">Nosotros</a>
+        <a class="block hover:text-blue-400 transition-colors duration-300 px-3 py-2 rounded-md text-base font-medium" href="#trabajos">Trabajos</a>
+        <a class="block hover:text-blue-400 transition-colors duration-300 px-3 py-2 rounded-md text-base font-medium" href="#contacto">Contacto</a>
       </div>
     </div>
   </nav>
@@ -70,20 +71,19 @@
   <div id="contacto"></div>
 
   <!-- FOOTER -->
-  <footer class="footer text-white py-4" style="background-color: #1c1c1e;">
-    <div class="container text-center">
-      <div class="mb-3">
-        <a href="mailto:latitudsur.eia@gmail.com" class="text-white me-3"><i class="fa fa-envelope me-1"></i>latitudsur.eia@gmail.com</a>
-        <a href="https://wa.me/5492215573180" target="_blank" class="text-success me-3"><i class="fab fa-whatsapp me-1"></i>WhatsApp</a>
-        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto text-center">
+      <div class="mb-4 flex justify-center items-center space-x-6">
+        <a href="mailto:latitudsur.eia@gmail.com" class="hover:text-blue-400 transition-colors duration-300"><i class="fa fa-envelope mr-2"></i>latitudsur.eia@gmail.com</a>
+        <a href="https://wa.me/5492215573180" target="_blank" class="text-green-400 hover:text-green-300 transition-colors duration-300"><i class="fab fa-whatsapp mr-2"></i>WhatsApp</a>
+        <a href="#" class="hover:text-blue-400 transition-colors duration-300"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-blue-400 transition-colors duration-300"><i class="fab fa-instagram"></i></a>
       </div>
-      <small>© <span id="year"></span> Latitud Sur. Todos los derechos reservados.</small>
+      <p class="text-gray-400">&copy; <span id="year"></span> Latitud Sur. Todos los derechos reservados.</p>
     </div>
   </footer>
 
   <!-- JS GLOBAL -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
   <!-- Carga dinámica de secciones -->
@@ -103,16 +103,26 @@
   <!-- Servicios toggle -->
   <script src="assets/js/toggleServicios.js"></script>
 
+  <!-- Navbar Toggle -->
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
   <!-- Año Footer -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 
-<!-- sticky bar presupuesto -->
-<div class="sticky-bar w-100 position-fixed bottom-0 start-0 bg-primary text-white text-center py-2 shadow-lg" style="z-index: 1050;">
-  <a href="#contacto" class="text-white fw-bold text-decoration-none">
-    ¿Necesitás un presupuesto? Contactanos ahora →
-  </a>
-</div>
+  <!-- sticky bar presupuesto -->
+  <div class="fixed bottom-0 left-0 right-0 bg-blue-600 text-white text-center py-3 shadow-lg z-50">
+    <a href="#contacto" class="text-white font-bold tracking-wider">
+      ¿Necesitás un presupuesto? Contactanos ahora →
+    </a>
+  </div>
 </body>
 </html>
