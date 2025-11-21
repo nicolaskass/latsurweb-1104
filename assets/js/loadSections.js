@@ -39,6 +39,12 @@ sections.forEach(section => {
           initServiceSelector();
           console.log("Service selector inicializado.");
         }
+
+        // Inicializar hero slideshow
+        if (typeof initHeroSlideshow !== 'undefined') {
+          initHeroSlideshow();
+          console.log("Hero slideshow inicializado.");
+        }
       }
     })
     .catch(error => console.error(`Error al cargar sección ${section}:`, error));
