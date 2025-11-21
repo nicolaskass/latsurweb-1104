@@ -33,6 +33,12 @@ sections.forEach(section => {
           new SwiperInit();
           console.log("Swiper inicializado.");
         }
+
+        // Inicializar selector de servicios en contacto
+        if (typeof initServiceSelector !== 'undefined') {
+          initServiceSelector();
+          console.log("Service selector inicializado.");
+        }
       }
     })
     .catch(error => console.error(`Error al cargar sección ${section}:`, error));

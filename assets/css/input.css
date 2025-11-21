@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.88); /* negro puro sin tonos azules */
+  background-color: rgba(255, 255, 255, 0.85); /* overlay blanco transparente */
   z-index: 0;
   pointer-events: none;
 }
@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 .curvas-fondo-claro h4,
 .curvas-fondo-claro h5,
 .curvas-fondo-claro p {
-  color: #fff !important;
+  color: #1f2937 !important; /* texto oscuro sobre fondo claro */
 }
 
 /* CURVAS FONDO OSCURO */
