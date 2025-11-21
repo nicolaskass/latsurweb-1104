@@ -25,3 +25,6 @@ build/
 # Personal backup files
 *.bak
 *.tmp
+
+# Tailwind CSS standalone CLI
+tailwindcss-linux-x64
