@@ -1,53 +1,178 @@
 <!-- CONTACTO -->
-<section id="contacto" class="py-20 bg-gray-900 text-white">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Contacto</h2>
-    <div class="grid md:grid-cols-2 gap-12">
+<section id="contacto" class="py-24 curvas-fondo-oscuro text-white">
+  <div class="container mx-auto px-4 md:px-6 lg:px-8">
+    <div class="mb-16 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Contacto</h2>
+      <p class="text-lg text-gray-300 max-w-2xl mx-auto">Estamos para asesorarte en tu proyecto</p>
+    </div>
 
-      <!-- Information -->
-      <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
-        <h5 class="text-2xl font-bold mb-6">¿Dónde encontrarnos?</h5>
-        <ul class="space-y-4">
-          <li class="flex items-center">
-            <i class="fa-solid fa-phone text-blue-400 w-6"></i>
-            <span>(0221) 557-3180</span>
-          </li>
-          <li class="flex items-center">
-            <i class="fa-solid fa-envelope text-blue-400 w-6"></i>
-            <span>latitudsur.eia@gmail.com</span>
-          </li>
-          <li class="flex items-center">
-            <i class="fa-solid fa-map-marker-alt text-blue-400 w-6"></i>
-            <span>La Plata, Buenos Aires</span>
-          </li>
-        </ul>
-        <hr class="my-6 border-gray-700">
-        <a href="https://wa.me/5492215573180" target="_blank" class="inline-flex items-center text-green-400 hover:text-green-300 transition-colors">
-          <i class="fab fa-whatsapp w-6"></i>
-          <span>Escribinos por WhatsApp</span>
+    <!-- Información de contacto -->
+    <div class="grid md:grid-cols-3 gap-8 mb-12">
+      <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-gray-700">
+        <h3 class="text-xl font-bold mb-4 flex items-center">
+          <i class="fas fa-phone mr-3 text-white"></i>
+          Teléfono
+        </h3>
+        <a href="tel:+5492215573180" class="text-gray-300 hover:text-white transition-colors text-lg">(0221) 557-3180</a>
+      </div>
+      <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-gray-700">
+        <h3 class="text-xl font-bold mb-4 flex items-center">
+          <i class="fas fa-envelope mr-3 text-white"></i>
+          Email
+        </h3>
+        <a href="mailto:latitudsur.eia@gmail.com" class="text-gray-300 hover:text-white transition-colors break-all">latitudsur.eia@gmail.com</a>
+      </div>
+      <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-gray-700">
+        <h3 class="text-xl font-bold mb-4 flex items-center">
+          <i class="fas fa-map-marker-alt mr-3 text-white"></i>
+          Ubicación
+        </h3>
+        <p class="text-gray-300">La Plata, Buenos Aires</p>
+      </div>
+    </div>
+
+    <!-- Formulario con dos columnas -->
+    <div class="grid lg:grid-cols-2 gap-8 mb-12">
+
+      <!-- Columna izquierda: Selector de servicios -->
+      <div class="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-gray-700">
+        <h3 class="text-2xl font-bold mb-6 flex items-center">
+          <i class="fas fa-cog mr-3 text-white"></i>
+          Servicios disponibles
+        </h3>
+
+        <label for="service-selector" class="block mb-3 font-semibold">Seleccioná el servicio de tu interés</label>
+        <select id="service-selector" class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all mb-6">
+          <option value="">-- Elegí un servicio --</option>
+          <option value="estado-parcelario">Estado Parcelario</option>
+          <option value="deslinde">Deslinde y Amojonamiento</option>
+          <option value="subdivisiones">Subdivisiones</option>
+          <option value="articulo-6">Artículo 6° / Decreto 947</option>
+          <option value="relevamientos">Relevamientos Topográficos</option>
+          <option value="replanteos">Replanteos de Obra</option>
+        </select>
+
+        <!-- Descripción del servicio seleccionado -->
+        <div id="service-description" class="hidden bg-gray-700/30 p-6 rounded-lg border border-gray-600">
+          <h4 class="text-lg font-bold mb-3 text-white" id="service-title"></h4>
+          <p class="text-gray-300" id="service-text"></p>
+        </div>
+
+        <!-- WhatsApp destacado -->
+        <a href="https://wa.me/5492215573180" target="_blank" class="mt-6 block bg-green-600 hover:bg-green-700 p-6 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 text-center">
+          <i class="fab fa-whatsapp text-5xl mb-3"></i>
+          <p class="text-xl font-bold">Escribinos por WhatsApp</p>
+          <p class="text-sm opacity-90 mt-2">Respuesta rápida y personalizada</p>
         </a>
       </div>
 
-      <!-- Form -->
-      <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
-        <h5 class="text-2xl font-bold mb-6">¿Necesitás un presupuesto?</h5>
-        <form>
-          <div class="mb-4">
-            <label for="name" class="block mb-2">Nombre</label>
-            <input type="text" id="name" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Tu nombre" required>
+      <!-- Columna derecha: Formulario -->
+      <div class="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-gray-700">
+        <h3 class="text-2xl font-bold mb-6 flex items-center">
+          <i class="fas fa-paper-plane mr-3 text-white"></i>
+          Envianos tu consulta
+        </h3>
+
+        <form class="space-y-6" id="contact-form">
+          <div>
+            <label for="name" class="block mb-2 font-semibold">Nombre completo</label>
+            <input type="text" id="name" class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all" placeholder="Juan Pérez" required>
           </div>
-          <div class="mb-4">
-            <label for="email" class="block mb-2">Correo electrónico</label>
-            <input type="email" id="email" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="nombre@ejemplo.com" required>
+
+          <div>
+            <label for="phone" class="block mb-2 font-semibold">Teléfono</label>
+            <input type="tel" id="phone" class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all" placeholder="(011) 1234-5678" required>
           </div>
-          <div class="mb-4">
-            <label for="message" class="block mb-2">Mensaje</label>
-            <textarea id="message" rows="4" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Contanos qué necesitás..." required></textarea>
+
+          <div>
+            <label for="email" class="block mb-2 font-semibold">Correo electrónico</label>
+            <input type="email" id="email" class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all" placeholder="nombre@ejemplo.com" required>
           </div>
-          <button type="submit" class="w-full py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-bold transition-colors">Enviar mensaje</button>
+
+          <div>
+            <label for="message" class="block mb-2 font-semibold">Mensaje</label>
+            <textarea id="message" rows="5" class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all resize-none" placeholder="Contanos sobre tu proyecto..." required></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-4 bg-white text-gray-900 rounded-lg font-bold text-lg transition-all duration-300 hover:bg-gray-100 transform hover:scale-[1.02] shadow-lg">
+            Enviar consulta
+          </button>
         </form>
       </div>
 
     </div>
+
+    <!-- Información adicional -->
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="text-center p-6 bg-gray-800/30 rounded-xl backdrop-blur-sm">
+        <i class="fas fa-shield-alt text-4xl text-white mb-3"></i>
+        <h4 class="font-bold text-lg mb-2">Profesionales Matriculados</h4>
+        <p class="text-gray-300 text-sm">Agrimensores con matrícula habilitante</p>
+      </div>
+      <div class="text-center p-6 bg-gray-800/30 rounded-xl backdrop-blur-sm">
+        <i class="fas fa-certificate text-4xl text-white mb-3"></i>
+        <h4 class="font-bold text-lg mb-2">Trabajos Certificados</h4>
+        <p class="text-gray-300 text-sm">Cumplimiento de normativas vigentes</p>
+      </div>
+      <div class="text-center p-6 bg-gray-800/30 rounded-xl backdrop-blur-sm">
+        <i class="fas fa-map-marked-alt text-4xl text-white mb-3"></i>
+        <h4 class="font-bold text-lg mb-2">Cobertura Nacional</h4>
+        <p class="text-gray-300 text-sm">Topografía en todo el país</p>
+      </div>
+    </div>
+
   </div>
 </section>
+
+<script>
+// Descripciones de servicios
+const serviceDescriptions = {
+  'estado-parcelario': {
+    title: 'Estado Parcelario',
+    description: 'Verificación legal y física de inmuebles. Obligatorio para escrituración y registro catastral en la Provincia de Buenos Aires.'
+  },
+  'deslinde': {
+    title: 'Deslinde y Amojonamiento',
+    description: 'Determinación de límites con mojones. Evita conflictos con vecinos y asegura la correcta delimitación de la propiedad.'
+  },
+  'subdivisiones': {
+    title: 'Subdivisiones',
+    description: 'Fraccionamiento de parcelas para herencias, desarrollos inmobiliarios o ventas. Cumplimiento técnico y legal garantizado.'
+  },
+  'articulo-6': {
+    title: 'Artículo 6° / Decreto 947',
+    description: 'Tramitación previa a construcciones o subdivisiones según Ley Provincial. Cumplimiento legal para presentación municipal.'
+  },
+  'relevamientos': {
+    title: 'Relevamientos Topográficos',
+    description: 'Obtención de datos altimétricos y planimétricos con GNSS y estación total. Esenciales para obras civiles, loteos y catastros.'
+  },
+  'replanteos': {
+    title: 'Replanteos de Obra',
+    description: 'Marcado de ejes, cotas y niveles en el terreno a partir del plano. Precisión para construcción segura y eficiente.'
+  }
+};
+
+// Actualizar descripción cuando se selecciona un servicio
+document.addEventListener('DOMContentLoaded', function() {
+  const serviceSelector = document.getElementById('service-selector');
+  const descriptionBox = document.getElementById('service-description');
+  const titleElement = document.getElementById('service-title');
+  const textElement = document.getElementById('service-text');
+
+  if (serviceSelector) {
+    serviceSelector.addEventListener('change', function() {
+      const selectedValue = this.value;
+
+      if (selectedValue && serviceDescriptions[selectedValue]) {
+        const service = serviceDescriptions[selectedValue];
+        titleElement.textContent = service.title;
+        textElement.textContent = service.description;
+        descriptionBox.classList.remove('hidden');
+      } else {
+        descriptionBox.classList.add('hidden');
+      }
+    });
+  }
+});
+</script>
