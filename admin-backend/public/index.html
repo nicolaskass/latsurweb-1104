@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Latitud Sur — Admin</title>
+  <link rel="stylesheet" href="/css/admin.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ── LOGIN SCREEN ─────────────────────────────────────────────────── -->
+<div id="login-screen">
+  <div class="login-card">
+    <div class="login-logo">🗺️</div>
+    <h1>Latitud Sur Admin</h1>
+    <p>Accedé con tu cuenta de Google</p>
+    <div id="google-btn"></div>
+    <p id="login-error" style="color:#e53e3e;margin-top:12px;font-size:.85rem;display:none;"></p>
+  </div>
+</div>
+
+<!-- ── APP ──────────────────────────────────────────────────────────── -->
+<div id="app" class="hidden">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">Latitud Sur</div>
+      <div class="subtitle">Panel de administración</div>
+    </div>
+    <div class="sidebar-user">
+      <img id="user-avatar" src="" alt="avatar" />
+      <div>
+        <div class="name" id="user-name">–</div>
+        <div class="email" id="user-email">–</div>
+      </div>
+    </div>
+    <nav>
+      <div class="nav-item active" data-section="hero"><span class="icon"><i class="fas fa-image"></i></span> Hero</div>
+      <div class="nav-item" data-section="servicios"><span class="icon"><i class="fas fa-tools"></i></span> Servicios</div>
+      <div class="nav-item" data-section="nosotros"><span class="icon"><i class="fas fa-users"></i></span> Nosotros</div>
+      <div class="nav-item" data-section="trabajos"><span class="icon"><i class="fas fa-briefcase"></i></span> Trabajos</div>
+      <div class="nav-item" data-section="contacto"><span class="icon"><i class="fas fa-phone"></i></span> Contacto</div>
+      <div class="nav-item" data-section="config"><span class="icon"><i class="fas fa-cog"></i></span> Configuración</div>
+    </nav>
+    <div class="sidebar-footer">
+      <button class="btn-logout" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</button>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main class="main-content">
+
+    <!-- HERO -->
+    <div class="section-panel active" id="panel-hero">
+      <div class="panel-header">
+        <div><h2>Hero</h2><p>Título, subtítulo y slides del encabezado</p></div>
+      </div>
+      <div class="card">
+        <h3>Texto principal</h3>
+        <div class="form-group"><label>Título</label><input id="hero-title" class="form-control" /></div>
+        <div class="form-group"><label>Subtítulo</label><textarea id="hero-subtitle" class="form-control" rows="2"></textarea></div>
+        <div class="form-group"><label>Texto del botón CTA</label><input id="hero-cta" class="form-control" /></div>
+        <button class="btn btn-primary" onclick="saveHeroText()"><i class="fas fa-save"></i> Guardar texto</button>
+      </div>
+      <div class="card">
+        <h3>Slides del slideshow</h3>
+        <div id="slides-list" class="items-list"></div>
+        <hr class="divider" />
+        <button class="btn btn-secondary" onclick="openSlideModal()"><i class="fas fa-plus"></i> Agregar slide</button>
+      </div>
+    </div>
+
+    <!-- SERVICIOS -->
+    <div class="section-panel" id="panel-servicios">
+      <div class="panel-header">
+        <div><h2>Servicios</h2><p>Tarjetas de servicios profesionales</p></div>
+        <button class="btn btn-primary" onclick="openServicioModal()"><i class="fas fa-plus"></i> Agregar</button>
+      </div>
+      <div id="servicios-list" class="items-list"></div>
+    </div>
+
+    <!-- NOSOTROS -->
+    <div class="section-panel" id="panel-nosotros">
+      <div class="panel-header">
+        <div><h2>Nosotros</h2><p>Equipo e información del estudio</p></div>
+      </div>
+      <div class="card">
+        <h3>Texto del estudio</h3>
+        <div class="form-group"><label>Introducción</label><textarea id="nos-intro" class="form-control" rows="3"></textarea></div>
+        <div class="form-group"><label>Frase final (itálica)</label><textarea id="nos-quote" class="form-control" rows="2"></textarea></div>
+        <button class="btn btn-primary" onclick="saveNosotrosText()"><i class="fas fa-save"></i> Guardar texto</button>
+      </div>
+      <div class="card">
+        <h3>Equipo</h3>
+        <div id="team-list" class="items-list"></div>
+        <hr class="divider" />
+        <button class="btn btn-secondary" onclick="openTeamModal()"><i class="fas fa-plus"></i> Agregar miembro</button>
+      </div>
+    </div>
+
+    <!-- TRABAJOS -->
+    <div class="section-panel" id="panel-trabajos">
+      <div class="panel-header">
+        <div><h2>Trabajos Realizados</h2><p>Proyectos del carrusel</p></div>
+        <button class="btn btn-primary" onclick="openTrabajoModal()"><i class="fas fa-plus"></i> Agregar</button>
+      </div>
+      <div id="trabajos-list" class="items-list"></div>
+    </div>
+
+    <!-- CONTACTO -->
+    <div class="section-panel" id="panel-contacto">
+      <div class="panel-header">
+        <div><h2>Contacto</h2><p>Información de contacto y badges</p></div>
+      </div>
+      <div class="card">
+        <h3>Datos de contacto</h3>
+        <div class="form-row">
+          <div class="form-group"><label>Teléfono (display)</label><input id="ct-phone" class="form-control" placeholder="(0221) 557-3180" /></div>
+          <div class="form-group"><label>WhatsApp (solo números)</label><input id="ct-whatsapp" class="form-control" placeholder="5492215573180" /></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Email</label><input id="ct-email" class="form-control" type="email" /></div>
+          <div class="form-group"><label>Ubicación</label><input id="ct-location" class="form-control" /></div>
+        </div>
+        <button class="btn btn-primary" onclick="saveContacto()"><i class="fas fa-save"></i> Guardar</button>
+      </div>
+      <div class="card">
+        <h3>Badges de credenciales</h3>
+        <div id="badges-list" class="items-list"></div>
+        <hr class="divider" />
+        <button class="btn btn-secondary" onclick="openBadgeModal()"><i class="fas fa-plus"></i> Agregar badge</button>
+      </div>
+    </div>
+
+    <!-- CONFIG -->
+    <div class="section-panel" id="panel-config">
+      <div class="panel-header">
+        <div><h2>Configuración</h2><p>Footer, redes sociales y estadísticas</p></div>
+      </div>
+      <div class="card">
+        <h3>Footer</h3>
+        <div class="form-group"><label>Texto de copyright</label><input id="cfg-copyright" class="form-control" /></div>
+        <div class="form-row">
+          <div class="form-group"><label>Email del footer</label><input id="cfg-email" class="form-control" type="email" /></div>
+          <div class="form-group"><label>WhatsApp (footer)</label><input id="cfg-whatsapp" class="form-control" /></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Facebook URL</label><input id="cfg-facebook" class="form-control" /></div>
+          <div class="form-group"><label>Instagram URL</label><input id="cfg-instagram" class="form-control" /></div>
+        </div>
+        <button class="btn btn-primary" onclick="saveConfig()"><i class="fas fa-save"></i> Guardar</button>
+      </div>
+      <div class="card">
+        <h3>Estadísticas (barra de stats)</h3>
+        <div id="stats-list" class="items-list"></div>
+        <hr class="divider" />
+        <button class="btn btn-secondary" onclick="openStatModal()"><i class="fas fa-plus"></i> Agregar stat</button>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- ── MODALS ────────────────────────────────────────────────────────── -->
+
+<!-- Slide Modal -->
+<div id="modal-slide" class="modal-overlay hidden">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="slide-modal-title">Slide</h3>
+      <button class="modal-close" onclick="closeModal('modal-slide')"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="modal-body">
+      <input type="hidden" id="slide-id" />
+      <div class="form-group">
+        <label>Imagen del slide</label>
+        <div class="img-upload-widget">
+          <img id="slide-img-preview" class="img-preview" src="" alt="preview" onerror="this.src=''" />
+          <div style="flex:1">
+            <input id="slide-image" class="form-control" placeholder="URL de imagen o subí un archivo" style="margin-bottom:6px" />
+            <label class="upload-btn">
+              <i class="fas fa-upload"></i> Subir imagen
+              <input type="file" accept="image/*" onchange="uploadImage(this,'hero','slide-image','slide-img-preview')" />
+            </label>
+            <div class="upload-note">Máx. 5MB · JPG, PNG, WEBP</div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group"><label>Texto alternativo (alt)</label><input id="slide-alt" class="form-control" /></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" onclick="closeModal('modal-slide')">Cancelar</button>
+      <button class="btn btn-primary" onclick="saveSlide()"><i class="fas fa-save"></i> Guardar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Servicio Modal -->
+<div id="modal-servicio" class="modal-overlay hidden">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="servicio-modal-title">Servicio</h3>
+      <button class="modal-close" onclick="closeModal('modal-servicio')"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="modal-body">
+      <input type="hidden" id="servicio-id" />
+      <div class="form-row">
+        <div class="form-group">
+          <label>Icono (Font Awesome class)</label>
+          <input id="servicio-icon" class="form-control" placeholder="fa-file-signature" />
+        </div>
+        <div class="form-group">
+          <label>Vista previa icono</label>
+          <div style="padding:10px 0"><i id="servicio-icon-preview" class="fa-solid fa-circle-question text-2xl" style="color:var(--accent)"></i></div>
+        </div>
+      </div>
+      <div class="form-group"><label>Título</label><input id="servicio-title" class="form-control" /></div>
+      <div class="form-group"><label>Descripción</label><textarea id="servicio-desc" class="form-control" rows="3"></textarea></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" onclick="closeModal('modal-servicio')">Cancelar</button>
+      <button class="btn btn-primary" onclick="saveServicio()"><i class="fas fa-save"></i> Guardar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Team Modal -->
+<div id="modal-team" class="modal-overlay hidden">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="team-modal-title">Miembro del equipo</h3>
+      <button class="modal-close" onclick="closeModal('modal-team')"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="modal-body">
+      <input type="hidden" id="team-id" />
+      <div class="form-row">
+        <div class="form-group"><label>Nombre</label><input id="team-name" class="form-control" /></div>
+        <div class="form-group"><label>Rol / Título</label><input id="team-role" class="form-control" /></div>
+      </div>
+      <div class="form-group">
+        <label>Foto de perfil</label>
+        <div class="img-upload-widget">
+          <img id="team-img-preview" class="img-preview" src="" alt="preview" style="border-radius:50%" onerror="this.src=''" />
+          <div style="flex:1">
+            <input id="team-photo" class="form-control" placeholder="URL o subí un archivo" style="margin-bottom:6px" />
+            <label class="upload-btn">
+              <i class="fas fa-upload"></i> Subir foto
+              <input type="file" accept="image/*" onchange="uploadImage(this,'team','team-photo','team-img-preview')" />
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group"><label>Biografía</label><textarea id="team-bio" class="form-control" rows="4"></textarea></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" onclick="closeModal('modal-team')">Cancelar</button>
+      <button class="btn btn-primary" onclick="saveTeamMember()"><i class="fas fa-save"></i> Guardar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Trabajo Modal -->
+<div id="modal-trabajo" class="modal-overlay hidden">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="trabajo-modal-title">Trabajo</h3>
+      <button class="modal-close" onclick="closeModal('modal-trabajo')"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="modal-body">
+      <input type="hidden" id="trabajo-id" />
+      <div class="form-group">
+        <label>Imagen del proyecto</label>
+        <div class="img-upload-widget">
+          <img id="trabajo-img-preview" class="img-preview" src="" alt="preview" onerror="this.src=''" />
+          <div style="flex:1">
+            <input id="trabajo-image" class="form-control" placeholder="URL o subí un archivo" style="margin-bottom:6px" />
+            <label class="upload-btn">
+              <i class="fas fa-upload"></i> Subir imagen
+              <input type="file" accept="image/*" onchange="uploadImage(this,'trabajos','trabajo-image','trabajo-img-preview')" />
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group"><label>Título</label><input id="trabajo-title" class="form-control" /></div>
+      <div class="form-group"><label>Descripción</label><textarea id="trabajo-desc" class="form-control" rows="2"></textarea></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" onclick="closeModal('modal-trabajo')">Cancelar</button>
+      <button class="btn btn-primary" onclick="saveTrabajo()"><i class="fas fa-save"></i> Guardar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Badge Modal -->
+<div id="modal-badge" class="modal-overlay hidden">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="badge-modal-title">Badge de credencial</h3>
+      <button class="modal-close" onclick="closeModal('modal-badge')"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="modal-body">
+      <input type="hidden" id="badge-id" />
+      <div class="form-row">
+        <div class="form-group">
+          <label>Icono FA</label>
+          <input id="badge-icon" class="form-control" placeholder="fa-shield-alt" />
+        </div>
+        <div class="form-group">
+          <label>Vista previa</label>
+          <div style="padding:10px 0"><i id="badge-icon-preview" class="fas fa-circle-question" style="color:var(--accent)"></i></div>
+        </div>
+      </div>
+      <div class="form-group"><label>Título</label><input id="badge-title" class="form-control" /></div>
+      <div class="form-group"><label>Descripción</label><input id="badge-text" class="form-control" /></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" onclick="closeModal('modal-badge')">Cancelar</button>
+      <button class="btn btn-primary" onclick="saveBadge()"><i class="fas fa-save"></i> Guardar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Stat Modal -->
+<div id="modal-stat" class="modal-overlay hidden">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="stat-modal-title">Estadística</h3>
+      <button class="modal-close" onclick="closeModal('modal-stat')"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="modal-body">
+      <input type="hidden" id="stat-id" />
+      <div class="form-row">
+        <div class="form-group"><label>Valor (ej: 10+)</label><input id="stat-value" class="form-control" /></div>
+        <div class="form-group"><label>Etiqueta</label><input id="stat-label" class="form-control" /></div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" onclick="closeModal('modal-stat')">Cancelar</button>
+      <button class="btn btn-primary" onclick="saveStat()"><i class="fas fa-save"></i> Guardar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast container -->
+<div class="toast-container" id="toast-container"></div>
+
+<!-- Google Identity Services -->
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="/js/admin.js"></script>
+</body>
+</html>

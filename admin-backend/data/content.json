@@ -1,0 +1,158 @@
+{
+  "site": {
+    "footer": {
+      "copyright": "2025 Latitud Sur. Todos los derechos reservados.",
+      "email": "latitudsur.eia@gmail.com",
+      "whatsapp": "5492215573180",
+      "facebook": "#",
+      "instagram": "#"
+    },
+    "stats": [
+      { "id": 1, "value": "10+", "label": "Años de experiencia" },
+      { "id": 2, "value": "200+", "label": "Proyectos realizados" },
+      { "id": 3, "value": "Prov. Buenos Aires", "label": "Agrimensura" },
+      { "id": 4, "value": "Todo el país", "label": "Topografía" }
+    ]
+  },
+  "hero": {
+    "title": "Precisión que transforma tu proyecto.",
+    "subtitle": "Topografía en todo el país. Agrimensura en Buenos Aires. Soluciones confiables, a tu medida.",
+    "cta": "Contactanos",
+    "slides": [
+      { "id": 1, "image": "assets/images/nivel-nikon.png", "alt": "Nivel Nikon en terreno" },
+      { "id": 2, "image": "assets/images/dron-loteo.png", "alt": "Relevamiento aéreo con dron" },
+      { "id": 3, "image": "assets/images/saneamiento.jpg", "alt": "Obras de saneamiento" },
+      { "id": 4, "image": "assets/images/estacionobra.png", "alt": "Estación total en obra" },
+      { "id": 5, "image": "assets/images/cad.png", "alt": "Trabajo en CAD" }
+    ]
+  },
+  "servicios": [
+    {
+      "id": 1,
+      "icon": "fa-file-signature",
+      "title": "Estado Parcelario",
+      "description": "Verificación legal y física de inmuebles. Obligatorio para escrituración y registro catastral en la Provincia de Buenos Aires."
+    },
+    {
+      "id": 2,
+      "icon": "fa-map-location-dot",
+      "title": "Deslinde y Amojonamiento",
+      "description": "Determinación de límites con mojones. Evita conflictos con vecinos y asegura la correcta delimitación de la propiedad."
+    },
+    {
+      "id": 3,
+      "icon": "fa-diagram-project",
+      "title": "Subdivisiones",
+      "description": "Fraccionamiento de parcelas para herencias, desarrollos inmobiliarios o ventas. Cumplimiento técnico y legal garantizado."
+    },
+    {
+      "id": 4,
+      "icon": "fa-scale-balanced",
+      "title": "Artículo 6° / Decreto 947",
+      "description": "Tramitación previa a construcciones o subdivisiones según Ley Provincial. Cumplimiento legal para presentación municipal."
+    },
+    {
+      "id": 5,
+      "icon": "fa-ruler-combined",
+      "title": "Relevamientos Topográficos",
+      "description": "Obtención de datos altimétricos y planimétricos con GNSS y estación total. Esenciales para obras civiles, loteos y catastros."
+    },
+    {
+      "id": 6,
+      "icon": "fa-drafting-compass",
+      "title": "Replanteos de Obra",
+      "description": "Marcado de ejes, cotas y niveles en el terreno a partir del plano. Precisión para construcción segura y eficiente."
+    }
+  ],
+  "nosotros": {
+    "intro": "Latitud Sur es un estudio profesional con sede en La Plata, especializado en topografía y agrimensura. Actualmente conformado por dos profesionales con más de una década de experiencia, brindamos soluciones precisas, eficientes y adaptadas a las necesidades de obras civiles, viales, hidráulicas y urbanas.",
+    "quote": "Un estudio joven, ágil y comprometido con la calidad técnica y el acompañamiento profesional en cada etapa del proyecto.",
+    "team": [
+      {
+        "id": 1,
+        "name": "Martín Moccia",
+        "role": "Ingeniero Agrimensor",
+        "photo": "assets/images/moccia.jpg",
+        "bio": "Ingeniero Agrimensor con más de 10 años de experiencia en obras civiles, viales e hidráulicas. Especialista en relevamientos, replanteos y dirección de obra. Con enfoque práctico y resolutivo, lidera proyectos integrales desde su concepción técnica hasta la ejecución en campo."
+      },
+      {
+        "id": 2,
+        "name": "Sebastián Saldivar",
+        "role": "Agrimensor",
+        "photo": "assets/images/saldivar.jpg",
+        "bio": "Agrimensor con trayectoria sólida en obras públicas y privadas. Ha intervenido en proyectos de parcelamiento, nivelación y gestión catastral en entornos urbanos y rurales. Su experiencia de campo garantiza precisión y confiabilidad en cada medición."
+      }
+    ]
+  },
+  "trabajos": [
+    {
+      "id": 1,
+      "image": "assets/images/ruta2.jpg",
+      "title": "Ensanche de Ruta 2",
+      "description": "Relevamiento y replanteo de traza para ampliación de autopista provincial."
+    },
+    {
+      "id": 2,
+      "image": "assets/images/saneamiento.jpg",
+      "title": "Obras de Saneamiento",
+      "description": "Nivelaciones para redes cloacales, pluviales y estaciones de bombeo."
+    },
+    {
+      "id": 3,
+      "image": "assets/images/urbanizacion.jpg",
+      "title": "Urbanización en La Plata",
+      "description": "Subdivisiones y gestiones catastrales para desarrollos inmobiliarios."
+    },
+    {
+      "id": 4,
+      "image": "assets/images/aerea.png",
+      "title": "Obras Hidráulicas",
+      "description": "Nivelaciones para planificación de escurrimientos y drenajes en Ezpeleta."
+    },
+    {
+      "id": 5,
+      "image": "assets/images/estacionobra.png",
+      "title": "Replanteos en Obra",
+      "description": "Marcado de ejes y cotas para obras civiles y viales en Altos de San Lorenzo."
+    },
+    {
+      "id": 6,
+      "image": "assets/images/dron-loteo.png",
+      "title": "Mejoras de Caminos",
+      "description": "Topografía para mantenimiento y estabilización de caminos rurales."
+    },
+    {
+      "id": 7,
+      "image": "assets/images/catastro.png",
+      "title": "Parques Industriales",
+      "description": "Subdivisiones y proyectos técnicos para zonas industriales en Pilar."
+    }
+  ],
+  "contacto": {
+    "phone": "(0221) 557-3180",
+    "phone_link": "+5492215573180",
+    "email": "lsuragrimensura@gmail.com",
+    "location": "La Plata, Buenos Aires",
+    "whatsapp": "5492215573180",
+    "badges": [
+      {
+        "id": 1,
+        "icon": "fa-shield-alt",
+        "title": "Profesionales Matriculados",
+        "text": "Agrimensores con matrícula habilitante"
+      },
+      {
+        "id": 2,
+        "icon": "fa-certificate",
+        "title": "Trabajos Certificados",
+        "text": "Cumplimiento de normativas vigentes"
+      },
+      {
+        "id": 3,
+        "icon": "fa-map-marked-alt",
+        "title": "Cobertura Nacional",
+        "text": "Topografía en todo el país"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+services:
+
+  latsurweb:
+    build: .
+    expose:
+      - "80"
+    volumes:
+      - latsurweb-data:/usr/share/nginx/html/uploads:ro
+    networks:
+      - web
+    restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.latsurweb.rule=Host(`latitud-sur.com.ar`) || Host(`www.latitud-sur.com.ar`)"
+      - "traefik.http.routers.latsurweb.entrypoints=websecure"
+      - "traefik.http.routers.latsurweb.tls.certresolver=letsencrypt"
+      - "traefik.http.services.latsurweb.loadbalancer.server.port=80"
+      # Redirect www to non-www
+      - "traefik.http.middlewares.latsurweb-www.redirectregex.regex=^https://www\\.latitud-sur\\.com\\.ar/(.*)"
+      - "traefik.http.middlewares.latsurweb-www.redirectregex.replacement=https://latitud-sur.com.ar/$${1}"
+      - "traefik.http.middlewares.latsurweb-www.redirectregex.permanent=true"
+      - "traefik.http.routers.latsurweb.middlewares=latsurweb-www"
+
+  latsurweb-admin:
+    build: ./admin-backend
+    expose:
+      - "3000"
+    environment:
+      - JWT_SECRET=${JWT_SECRET}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - ALLOWED_EMAILS=${ALLOWED_EMAILS}
+      - DATA_DIR=/app/data
+    volumes:
+      - latsurweb-data:/app/data
+    networks:
+      - web
+    restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.latsurweb-admin.rule=Host(`admin.latitud-sur.com.ar`)"
+      - "traefik.http.routers.latsurweb-admin.entrypoints=websecure"
+      - "traefik.http.routers.latsurweb-admin.tls.certresolver=letsencrypt"
+      - "traefik.http.services.latsurweb-admin.loadbalancer.server.port=3000"
+
+networks:
+  web:
+    external: true
+
+volumes:
+  latsurweb-data:
