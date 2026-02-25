@@ -1,5 +1,9 @@
-# Node modules (si en el futuro usás npm)
+# Node modules
 node_modules/
+admin-backend/node_modules/
+
+# Environment variables (never commit secrets)
+.env
 
 # Logs
 *.log

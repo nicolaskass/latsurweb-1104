@@ -1,53 +1,96 @@
 <!-- HERO -->
 <header class="relative h-screen w-full overflow-hidden">
-  <!-- Background Image Slideshow -->
-  <div class="hero-slideshow absolute inset-0" style="z-index: 0;">
-    <div class="hero-slide active" style="background-image: url('assets/images/nivel-nikon.png');"></div>
-    <div class="hero-slide" style="background-image: url('assets/images/dron-loteo.png');"></div>
-    <div class="hero-slide" style="background-image: url('assets/images/saneamiento.jpg');"></div>
-    <div class="hero-slide" style="background-image: url('assets/images/estacionobra.png');"></div>
-    <div class="hero-slide" style="background-image: url('assets/images/cad.png');"></div>
+
+  <!-- Background slideshow -->
+  <div id="hero-slideshow" class="hero-slideshow absolute inset-0" style="z-index:0">
+    <div class="hero-slide active" style="background-image:url('assets/images/nivel-nikon.png')"></div>
+    <div class="hero-slide" style="background-image:url('assets/images/dron-loteo.png')"></div>
+    <div class="hero-slide" style="background-image:url('assets/images/saneamiento.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('assets/images/estacionobra.png')"></div>
+    <div class="hero-slide" style="background-image:url('assets/images/cad.png')"></div>
   </div>
 
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-black/60" style="z-index: 1;"></div>
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-black/65" style="z-index:1"></div>
 
-  <!-- Text Content -->
-  <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4" style="z-index: 2;">
-    <h1 class="text-4xl md:text-6xl font-bold tracking-tight hero-title mb-4 text-shadow-lg">Precisión que transforma tu proyecto.</h1>
-    <p class="text-lg md:text-xl max-w-3xl hero-subtitle text-shadow-md">Topografía en todo el país. Agrimensura en Buenos Aires. Soluciones confiables, a tu medida.</p>
-    <a href="#contacto" class="mt-8 px-8 py-3 bg-white text-gray-900 hover:bg-gray-100 rounded-full text-lg font-semibold transition-transform transform hover:scale-105 shadow-lg">Contactanos</a>
+  <!-- Content -->
+  <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6" style="z-index:2">
+    <div class="hero-badge mb-6">
+      <span>Agrimensura &amp; Topografía</span>
+    </div>
+    <h1 id="hero-title" class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight hero-title mb-6 max-w-4xl leading-tight">
+      Precisión que transforma tu proyecto.
+    </h1>
+    <p id="hero-subtitle" class="text-lg md:text-xl max-w-2xl hero-subtitle text-gray-200 leading-relaxed mb-10">
+      Topografía en todo el país. Agrimensura en Buenos Aires. Soluciones confiables, a tu medida.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 items-center">
+      <a id="hero-cta" href="#contacto"
+         class="px-8 py-4 bg-accent text-black rounded-full text-lg font-bold transition-all duration-300 hover:bg-accent-hover hover:scale-105 shadow-xl shadow-accent/20">
+        Contactanos
+      </a>
+      <a href="#servicios"
+         class="px-8 py-4 border border-white/40 text-white rounded-full text-lg font-semibold transition-all duration-300 hover:border-white hover:bg-white/10 backdrop-blur-sm">
+        Ver servicios
+      </a>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 hero-scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
   </div>
+
 </header>
 
 <style>
-  .hero-slideshow {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-
+  .hero-slideshow { position:absolute; width:100%; height:100%; }
   .hero-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+    position:absolute; top:0; left:0; width:100%; height:100%;
+    background-size:cover; background-position:center; background-repeat:no-repeat;
+    opacity:0; transition:opacity 1.5s ease-in-out;
+  }
+  .hero-slide.active { opacity:1; }
+
+  .hero-badge {
+    display:inline-flex; align-items:center;
+    background:rgba(196,147,63,.15);
+    border:1px solid rgba(196,147,63,.35);
+    border-radius:999px;
+    padding:6px 20px;
+    font-size:.8rem;
+    font-weight:600;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:#C4933F;
+    backdrop-filter:blur(8px);
   }
 
-  .hero-slide.active {
-    opacity: 1;
-  }
+  .bg-accent       { background-color:#C4933F; }
+  .bg-accent-hover { background-color:#d4a34f; }
+  .shadow-accent\/20 { box-shadow:0 12px 32px rgba(196,147,63,.2); }
+  .text-accent     { color:#C4933F; }
 
-  .text-shadow-lg {
-    text-shadow: 0 2px 10px rgba(0,0,0,0.7), 0 4px 20px rgba(0,0,0,0.9);
+  .hero-title   { text-shadow:0 2px 20px rgba(0,0,0,.8); }
+  .hero-subtitle{ text-shadow:0 1px 8px rgba(0,0,0,.6); }
+
+  /* Scroll indicator */
+  .hero-scroll-indicator { opacity:.6; animation:bounce 2s infinite; }
+  .scroll-dot {
+    width:24px; height:38px;
+    border:2px solid rgba(255,255,255,.5);
+    border-radius:12px;
+    position:relative;
+    margin:0 auto;
   }
-  .text-shadow-md {
-    text-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 2px 10px rgba(0,0,0,0.7);
+  .scroll-dot::after {
+    content:'';
+    position:absolute; top:6px; left:50%; transform:translateX(-50%);
+    width:4px; height:8px;
+    background:#fff;
+    border-radius:2px;
+    animation:scrollDot 1.5s ease-in-out infinite;
   }
+  @keyframes scrollDot { 0%,100%{top:6px;opacity:1} 50%{top:16px;opacity:.3} }
+  @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
 </style>

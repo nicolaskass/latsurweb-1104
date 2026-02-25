@@ -1,41 +1,62 @@
 <!-- NOSOTROS -->
-<section id="nosotros" class="py-24 curvas-fondo-oscuro text-white">
+<section id="nosotros" class="py-24 curvas-fondo-oscuro">
   <div class="container mx-auto px-4 md:px-6 lg:px-8">
-    <div class="mb-16 text-center">
-      <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Nosotros</h2>
-      <p class="text-lg text-center max-w-3xl mx-auto mb-12 text-gray-300">
-      <strong>Latitud Sur</strong> es un estudio profesional con sede en La Plata, especializado en topografía y agrimensura. Actualmente conformado por dos profesionales con más de una década de experiencia, brindamos soluciones precisas, eficientes y adaptadas a las necesidades de obras civiles, viales, hidráulicas y urbanas.
-    </p>
 
-    <!-- Team Cards -->
-    <div class="flex flex-wrap justify-center gap-8">
+    <div class="mb-16 text-center">
+      <p class="section-label-dark">Quiénes somos</p>
+      <h2 class="section-heading-dark text-4xl md:text-5xl font-bold text-white mb-6">Nosotros</h2>
+      <p id="nosotros-intro" class="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+        <strong class="text-white">Latitud Sur</strong> es un estudio profesional con sede en La Plata, especializado en topografía y agrimensura. Actualmente conformado por dos profesionales con más de una década de experiencia, brindamos soluciones precisas, eficientes y adaptadas a las necesidades de obras civiles, viales, hidráulicas y urbanas.
+      </p>
+    </div>
+
+    <!-- Team cards -->
+    <div id="nosotros-team" class="flex flex-wrap justify-center gap-8 mb-12">
 
       <!-- Martín Moccia -->
-      <div class="w-full md:w-1/2 lg:w-1/3 team-card rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
-        <img src="assets/images/moccia.jpg" class="w-full h-80 object-cover object-top" alt="Martín Moccia">
+      <div class="team-card rounded-2xl overflow-hidden w-full md:w-72 lg:w-80">
+        <div class="relative">
+          <img src="assets/images/moccia.jpg" class="w-full h-72 object-cover object-top" alt="Martín Moccia">
+          <div class="team-card-overlay absolute inset-0"></div>
+        </div>
         <div class="p-6">
-          <h5 class="text-2xl font-bold mb-2">Martín Moccia</h5>
-          <p class="text-gray-300">
-            Ingeniero Agrimensor con más de 10 años de experiencia en obras civiles, viales e hidráulicas. Especialista en relevamientos, replanteos y dirección de obra. Con enfoque práctico y resolutivo, lidera proyectos integrales desde su concepción técnica hasta la ejecución en campo.
+          <p class="text-xs font-semibold text-accent tracking-widest uppercase mb-1">Ingeniero Agrimensor</p>
+          <h5 class="text-xl font-bold text-white mb-3">Martín Moccia</h5>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Más de 10 años de experiencia en obras civiles, viales e hidráulicas. Especialista en relevamientos, replanteos y dirección de obra.
           </p>
         </div>
       </div>
 
       <!-- Sebastián Saldivar -->
-      <div class="w-full md:w-1/2 lg:w-1/3 team-card rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
-        <img src="assets/images/saldivar.jpg" class="w-full h-80 object-cover" alt="Sebastián Saldivar">
+      <div class="team-card rounded-2xl overflow-hidden w-full md:w-72 lg:w-80">
+        <div class="relative">
+          <img src="assets/images/saldivar.jpg" class="w-full h-72 object-cover" alt="Sebastián Saldivar">
+          <div class="team-card-overlay absolute inset-0"></div>
+        </div>
         <div class="p-6">
-          <h5 class="text-2xl font-bold mb-2">Sebastián Saldivar</h5>
-          <p class="text-gray-300">
-            Agrimensor con trayectoria sólida en obras públicas y privadas. Ha intervenido en proyectos de parcelamiento, nivelación y gestión catastral en entornos urbanos y rurales. Su experiencia de campo garantiza precisión y confiabilidad en cada medición.
+          <p class="text-xs font-semibold text-accent tracking-widest uppercase mb-1">Agrimensor</p>
+          <h5 class="text-xl font-bold text-white mb-3">Sebastián Saldivar</h5>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Trayectoria sólida en obras públicas y privadas. Experto en parcelamiento, nivelación y gestión catastral urbana y rural.
           </p>
         </div>
       </div>
 
     </div>
 
-    <p class="text-center italic mt-12 max-w-2xl mx-auto text-gray-400">
-      Un estudio joven, ágil y comprometido con la calidad técnica y el acompañamiento profesional en cada etapa del proyecto.
-    </p>
+    <!-- Quote -->
+    <div class="text-center">
+      <p id="nosotros-quote" class="text-base italic text-gray-500 max-w-2xl mx-auto border-l-2 border-accent/40 pl-4 text-left md:text-center md:border-0 md:pl-0">
+        Un estudio joven, ágil y comprometido con la calidad técnica y el acompañamiento profesional en cada etapa del proyecto.
+      </p>
+    </div>
+
   </div>
 </section>
+
+<style>
+  .text-accent { color:#C4933F; }
+  .border-accent\/40 { border-color:rgba(196,147,63,.4); }
+  .team-card-overlay { background:linear-gradient(to top, rgba(0,0,0,.5) 0%, transparent 50%); }
+</style>

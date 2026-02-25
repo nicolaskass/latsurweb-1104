@@ -1,102 +1,97 @@
 <!-- CONTACTO -->
-<section id="contacto" class="py-24 curvas-fondo-oscuro text-white">
+<section id="contacto" class="py-24 curvas-fondo-oscuro">
   <div class="container mx-auto px-4 md:px-6 lg:px-8">
+
     <div class="mb-16 text-center">
-      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Contacto</h2>
-      <p class="text-lg text-gray-300 max-w-2xl mx-auto">Estamos para asesorarte en tu proyecto</p>
+      <p class="section-label-dark">Hablemos</p>
+      <h2 class="section-heading-dark text-4xl md:text-5xl font-bold text-white mb-4">Contacto</h2>
+      <p class="text-lg text-gray-400 max-w-2xl mx-auto">Estamos para asesorarte en tu proyecto</p>
     </div>
 
-    <!-- Información de contacto -->
-    <div class="grid md:grid-cols-3 gap-8 mb-12">
-      <div class="bg-black/50 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/20">
-        <h3 class="text-xl font-bold mb-4 flex items-center">
-          <i class="fas fa-phone mr-3 text-white"></i>
-          Teléfono
-        </h3>
-        <a href="tel:+5492215573180" class="text-gray-300 hover:text-white transition-colors text-lg">(0221) 557-3180</a>
+    <!-- Info cards -->
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="contact-info-card p-6 rounded-2xl text-center">
+        <div class="contact-icon-wrap mx-auto mb-4"><i class="fas fa-phone text-xl"></i></div>
+        <h3 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-2">Teléfono</h3>
+        <a id="contacto-phone-link" href="tel:+5492215573180" class="text-white text-lg font-semibold hover:text-accent transition-colors">
+          <span id="contacto-phone">(0221) 557-3180</span>
+        </a>
       </div>
-      <div class="bg-black/50 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/20">
-        <h3 class="text-xl font-bold mb-4 flex items-center">
-          <i class="fas fa-envelope mr-3 text-white"></i>
-          Email
-        </h3>
-        <a href="mailto:lsuragrimensura@gmail.com" class="text-gray-300 hover:text-white transition-colors break-all">lsuragrimensura@gmail.com</a>
+      <div class="contact-info-card p-6 rounded-2xl text-center">
+        <div class="contact-icon-wrap mx-auto mb-4"><i class="fas fa-envelope text-xl"></i></div>
+        <h3 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-2">Email</h3>
+        <a id="contacto-email-link" href="mailto:lsuragrimensura@gmail.com" class="text-white text-lg font-semibold hover:text-accent transition-colors break-all">
+          <span id="contacto-email">lsuragrimensura@gmail.com</span>
+        </a>
       </div>
-      <div class="bg-black/50 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-white/20">
-        <h3 class="text-xl font-bold mb-4 flex items-center">
-          <i class="fas fa-map-marker-alt mr-3 text-white"></i>
-          Ubicación
-        </h3>
-        <p class="text-gray-300">La Plata, Buenos Aires</p>
+      <div class="contact-info-card p-6 rounded-2xl text-center">
+        <div class="contact-icon-wrap mx-auto mb-4"><i class="fas fa-map-marker-alt text-xl"></i></div>
+        <h3 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-2">Ubicacion</h3>
+        <p id="contacto-location" class="text-white text-lg font-semibold">La Plata, Buenos Aires</p>
       </div>
     </div>
 
-    <!-- Formulario con dos columnas -->
+    <!-- Form + selector -->
     <div class="grid lg:grid-cols-2 gap-8 mb-12">
 
-      <!-- Columna izquierda: Selector de servicios -->
-      <div class="bg-black/50 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-white/20">
-        <h3 class="text-2xl font-bold mb-6 flex items-center">
-          <i class="fas fa-cog mr-3 text-white"></i>
+      <!-- WhatsApp + selector -->
+      <div class="form-panel p-8 rounded-2xl">
+        <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+          <span class="contact-icon-sm"><i class="fas fa-cog"></i></span>
           Servicios disponibles
         </h3>
 
-        <!-- WhatsApp destacado -->
-        <a href="https://wa.me/5492215573180" target="_blank" class="flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 p-4 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 text-center mb-6">
-          <i class="fab fa-whatsapp text-3xl"></i>
-          <div class="text-left">
-            <p class="text-lg font-bold">Escribinos por WhatsApp</p>
-            <p class="text-xs opacity-90">Respuesta rápida</p>
+        <a id="contacto-wa-btn" href="https://wa.me/5492215573180" target="_blank"
+           class="wa-cta flex items-center gap-4 p-4 rounded-xl mb-6 transition-all duration-300 hover:scale-[1.02]">
+          <i class="fab fa-whatsapp text-3xl text-white"></i>
+          <div>
+            <p class="text-white font-bold text-lg leading-none">Escribinos por WhatsApp</p>
+            <p class="text-green-200 text-sm mt-1">Respuesta rapida</p>
           </div>
+          <i class="fas fa-arrow-right ml-auto text-white/70"></i>
         </a>
 
-        <label for="service-selector" class="block mb-3 font-semibold">Seleccioná el servicio de tu interés</label>
-        <select id="service-selector" class="w-full px-4 py-3 bg-gray-900 border border-white/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all mb-6">
-          <option value="" class="bg-gray-900 text-gray-400">-- Elegí un servicio --</option>
-          <option value="estado-parcelario" class="bg-gray-900 text-white">Estado Parcelario</option>
-          <option value="deslinde" class="bg-gray-900 text-white">Deslinde y Amojonamiento</option>
-          <option value="subdivisiones" class="bg-gray-900 text-white">Subdivisiones</option>
-          <option value="articulo-6" class="bg-gray-900 text-white">Artículo 6° / Decreto 947</option>
-          <option value="relevamientos" class="bg-gray-900 text-white">Relevamientos Topográficos</option>
-          <option value="replanteos" class="bg-gray-900 text-white">Replanteos de Obra</option>
+        <label for="service-selector" class="block mb-2 text-sm font-semibold text-gray-300">Selecciona el servicio de tu interes</label>
+        <select id="service-selector" class="service-select w-full px-4 py-3 rounded-xl mb-6 focus:outline-none transition-all">
+          <option value="">Elegi un servicio</option>
+          <option value="estado-parcelario">Estado Parcelario</option>
+          <option value="deslinde">Deslinde y Amojonamiento</option>
+          <option value="subdivisiones">Subdivisiones</option>
+          <option value="articulo-6">Articulo 6 / Decreto 947</option>
+          <option value="relevamientos">Relevamientos Topograficos</option>
+          <option value="replanteos">Replanteos de Obra</option>
         </select>
 
-        <!-- Descripción del servicio seleccionado -->
-        <div id="service-description" class="hidden bg-black/30 p-6 rounded-lg border border-white/20">
-          <h4 class="text-lg font-bold mb-3 text-white" id="service-title"></h4>
+        <div id="service-description" class="hidden service-desc-box p-5 rounded-xl">
+          <h4 class="text-base font-bold mb-2 text-white" id="service-title"></h4>
           <p class="text-gray-300 text-sm leading-relaxed" id="service-text"></p>
         </div>
       </div>
 
-      <!-- Columna derecha: Formulario -->
-      <div class="bg-black/50 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-white/20">
-        <h3 class="text-2xl font-bold mb-6 flex items-center">
-          <i class="fas fa-paper-plane mr-3 text-white"></i>
+      <!-- Contact form -->
+      <div class="form-panel p-8 rounded-2xl">
+        <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+          <span class="contact-icon-sm"><i class="fas fa-paper-plane"></i></span>
           Envianos tu consulta
         </h3>
-
-        <form class="space-y-6" id="contact-form">
+        <form class="space-y-5" id="contact-form">
           <div>
-            <label for="name" class="block mb-2 font-semibold">Nombre completo</label>
-            <input type="text" id="name" class="w-full px-4 py-3 bg-black/50 border border-white/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all placeholder-gray-400" placeholder="Juan Pérez" required>
+            <label for="name" class="block mb-1.5 text-sm font-semibold text-gray-300">Nombre completo</label>
+            <input type="text" id="name" class="contact-input w-full px-4 py-3 rounded-xl focus:outline-none transition-all" placeholder="Juan Perez" required>
           </div>
-
           <div>
-            <label for="phone" class="block mb-2 font-semibold">Teléfono</label>
-            <input type="tel" id="phone" class="w-full px-4 py-3 bg-black/50 border border-white/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all placeholder-gray-400" placeholder="(011) 1234-5678" required>
+            <label for="phone" class="block mb-1.5 text-sm font-semibold text-gray-300">Telefono</label>
+            <input type="tel" id="phone" class="contact-input w-full px-4 py-3 rounded-xl focus:outline-none transition-all" placeholder="(011) 1234-5678" required>
           </div>
-
           <div>
-            <label for="email" class="block mb-2 font-semibold">Correo electrónico</label>
-            <input type="email" id="email" class="w-full px-4 py-3 bg-black/50 border border-white/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all placeholder-gray-400" placeholder="nombre@ejemplo.com" required>
+            <label for="email" class="block mb-1.5 text-sm font-semibold text-gray-300">Correo electronico</label>
+            <input type="email" id="email" class="contact-input w-full px-4 py-3 rounded-xl focus:outline-none transition-all" placeholder="nombre@ejemplo.com" required>
           </div>
-
           <div>
-            <label for="message" class="block mb-2 font-semibold">Mensaje</label>
-            <textarea id="message" rows="5" class="w-full px-4 py-3 bg-black/50 border border-white/30 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all resize-none placeholder-gray-400" placeholder="Contanos sobre tu proyecto..." required></textarea>
+            <label for="message" class="block mb-1.5 text-sm font-semibold text-gray-300">Mensaje</label>
+            <textarea id="message" rows="4" class="contact-input w-full px-4 py-3 rounded-xl focus:outline-none transition-all resize-none" placeholder="Contanos sobre tu proyecto..." required></textarea>
           </div>
-
-          <button type="submit" class="w-full py-4 bg-white text-gray-900 rounded-lg font-bold text-lg transition-all duration-300 hover:bg-gray-100 transform hover:scale-[1.02] shadow-lg">
+          <button type="submit" class="submit-btn w-full py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-[1.02] shadow-lg">
             Enviar consulta
           </button>
         </form>
@@ -104,24 +99,109 @@
 
     </div>
 
-    <!-- Información adicional -->
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="text-center p-6 bg-black/30 rounded-xl backdrop-blur-sm border border-white/10">
-        <i class="fas fa-shield-alt text-4xl text-white mb-3"></i>
-        <h4 class="font-bold text-lg mb-2">Profesionales Matriculados</h4>
-        <p class="text-gray-300 text-sm">Agrimensores con matrícula habilitante</p>
+    <!-- Credential badges -->
+    <div id="contacto-badges" class="grid md:grid-cols-3 gap-6">
+      <div class="badge-card text-center p-6 rounded-2xl">
+        <i class="fas fa-shield-alt text-3xl text-accent mb-3"></i>
+        <h4 class="font-bold text-white mb-1">Profesionales Matriculados</h4>
+        <p class="text-gray-400 text-sm">Agrimensores con matricula habilitante</p>
       </div>
-      <div class="text-center p-6 bg-black/30 rounded-xl backdrop-blur-sm border border-white/10">
-        <i class="fas fa-certificate text-4xl text-white mb-3"></i>
-        <h4 class="font-bold text-lg mb-2">Trabajos Certificados</h4>
-        <p class="text-gray-300 text-sm">Cumplimiento de normativas vigentes</p>
+      <div class="badge-card text-center p-6 rounded-2xl">
+        <i class="fas fa-certificate text-3xl text-accent mb-3"></i>
+        <h4 class="font-bold text-white mb-1">Trabajos Certificados</h4>
+        <p class="text-gray-400 text-sm">Cumplimiento de normativas vigentes</p>
       </div>
-      <div class="text-center p-6 bg-black/30 rounded-xl backdrop-blur-sm border border-white/10">
-        <i class="fas fa-map-marked-alt text-4xl text-white mb-3"></i>
-        <h4 class="font-bold text-lg mb-2">Cobertura Nacional</h4>
-        <p class="text-gray-300 text-sm">Topografía en todo el país</p>
+      <div class="badge-card text-center p-6 rounded-2xl">
+        <i class="fas fa-map-marked-alt text-3xl text-accent mb-3"></i>
+        <h4 class="font-bold text-white mb-1">Cobertura Nacional</h4>
+        <p class="text-gray-400 text-sm">Topografia en todo el pais</p>
       </div>
     </div>
 
   </div>
 </section>
+
+<style>
+  .text-accent  { color:#C4933F; }
+  .hover\:text-accent:hover { color:#C4933F; }
+
+  .contact-info-card {
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+    transition:border-color .3s;
+  }
+  .contact-info-card:hover { border-color:rgba(196,147,63,.3); }
+
+  .contact-icon-wrap {
+    width:48px; height:48px;
+    border-radius:50%;
+    background:rgba(196,147,63,.12);
+    border:1px solid rgba(196,147,63,.25);
+    display:flex; align-items:center; justify-content:center;
+    color:#C4933F;
+  }
+  .contact-icon-sm {
+    width:36px; height:36px;
+    border-radius:10px;
+    background:rgba(196,147,63,.12);
+    border:1px solid rgba(196,147,63,.2);
+    display:inline-flex; align-items:center; justify-content:center;
+    color:#C4933F;
+    font-size:.85rem;
+  }
+
+  .form-panel {
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+  }
+
+  .wa-cta {
+    background:linear-gradient(135deg, #1a7a42, #22a355);
+    border:1px solid rgba(255,255,255,.15);
+  }
+  .wa-cta:hover { filter:brightness(1.08); }
+
+  .service-select {
+    background:#0a0a0a;
+    border:1px solid rgba(255,255,255,.12);
+    color:#fff;
+    appearance:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23888' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat:no-repeat; background-position:right 12px center; background-size:20px;
+    padding-right:40px;
+  }
+  .service-select:focus { border-color:#C4933F; }
+  .service-select option { background:#111; }
+
+  .service-desc-box {
+    background:rgba(196,147,63,.06);
+    border:1px solid rgba(196,147,63,.2);
+  }
+
+  .contact-input {
+    background:rgba(0,0,0,.4);
+    border:1px solid rgba(255,255,255,.1);
+    color:#fff;
+    font-family:inherit;
+  }
+  .contact-input:focus { border-color:#C4933F; box-shadow:0 0 0 3px rgba(196,147,63,.1); }
+  .contact-input::placeholder { color:#555; }
+
+  .submit-btn {
+    background:#C4933F;
+    color:#000;
+    font-family:inherit;
+    border:none;
+    cursor:pointer;
+  }
+  .submit-btn:hover { background:#d4a34f; box-shadow:0 8px 24px rgba(196,147,63,.3); }
+
+  .badge-card {
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(255,255,255,.07);
+    transition:border-color .3s, transform .3s;
+  }
+  .badge-card:hover { border-color:rgba(196,147,63,.2); transform:translateY(-4px); }
+</style>
